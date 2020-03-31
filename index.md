@@ -1,6 +1,0 @@
-
-<body>
- <TABLE>
-  
- </TABLE>
-</body>
