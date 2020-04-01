@@ -7,150 +7,361 @@
 		<h1><i>The Binding of Isaac: Rebirth</i> Interactive Item Table</h1>
 	</header>
 	<body>
-		<p>
-				<input type="text" placeholder="Search for items" onkeyup="itemfilter()"></input>
-				<input type="submit" name="form" value="Search">
-				<datalist id="tags">
-					<option value="Anatomy">
-					<option value="Animal">
-					<option value="Apparel">
-					<option value="Arrow">
-					<option value="Baby">
-				<option value="Bag">
-				<option value="Ball">
-				<option value="Bandage">
-				<option value="Bat">
-				<option value="Battery">
-				<option value="Bean">
-				<option value="Belt">
-				<option value="Bird">
-				<option value="Black">
-				<option value="Blood">
-				<option value="Blue">
-				<option value="Bomb">
-				<option value="Bone">
-				<option value="Book">
-				<option value="Bottle">
-				<option value="Box">
-				<option value="Brown">
-				<option value="Bug">
-				<option value="Bum">
-				<option value="Candle">
-				<option value="Card">
-				<option value="Cat">
-				<option value="Circle">
-				<option value="Cloth">
-				<option value="Coin">
-				<option value="Cross">
-				<option value="Crown">
-				<option value="Dice">
-				<option value="Dog">
-				<option value="Drop">
-				<option value="Egg">
-				<option value="Electric">
-				<option value="Eye">
-				<option value="Feather">
-				<option value="Fire">
-				<option value="Food">
-				<option value="Fly">
-				<option value="Glass">
-				<option value="Goat">
-				<option value="Golden">
-				<option value="Googles">
-				<option value="Gore">
-				<option value="Green">
-				<option value="Hat">
-				<option value="Head">
-				<option value="Holy">
-				<option value="Horn">
-				<option value="Horse">
-				<option value="Interrogation Mark">
-				<option value="Jar">
-				<option value="Jewel">
-				<option value="Key">
-				<option value="Knife">
-				<option value="Magnet">
-				<option value="Make up">
-				<option value="Match">
-				<option value="Metal">
-				<option value="Mushroom">
-				<option value="Number">
-				<option value="Paper">
-				<option value="Photo">
-				<option value="Pill">
-				<option value="Pink">
-				<option value="Purple">
-				<option value="Rainbow">
-				<option value="Razor">
-				<option value="Rectangle">
-				<option value="Red">
-				<option value="Remote">
-				<option value="Rotten">
-				<option value="Rune">
-				<option value="Shadow">
-				<option value="Sharp">
-				<option value="Skull">
-				<option value="Spider">
-				<option value="Square">
-				<option value="Star">
-				<option value="Stick">
-				<option value="Stone">
-				<option value="Symbol">
-				<option value="Syringe">
-				<option value="Teal">
-				<option value="Tear">
-				<option value="Technology">
-				<option value="Tool">
-				<option value="Tooth">
-				<option value="Triangle">
-				<option value="Underwear">
-				<option value="Video Game">
-				<option value="Viscera">
-				<option value="Weapon">
-				<option value="White">
-				<option value="Wood">
-				<option value="Worm">
-				<option value="Yellow">
-				<option value="Zodiac">
-			</datalist>
-		</p>
+		<aside>
+			<div id="myBtnContainer">
+				<Button class="btn_active" onclick="filterSelection('all')">Show all</Button>
+				<Button class="btn" onclick="filterSelection('anatomy')">Anatomy</Button>
+				<Button class="btn" onclick="filterSelection('animal')">Animal</Button>
+				<Button class="btn" onclick="filterSelection('apparel')">Apparel</Button>
+				<Button class="btn" onclick="filterSelection('baby')">Baby</Button>
+				<Button class="btn" onclick="filterSelection('bag')">Bag</Button>
+				<Button class="btn" onclick="filterSelection('ball')">Ball</Button>
+				<Button class="btn" onclick="filterSelection('bandage')">Bandage</Button>
+				<Button class="btn" onclick="filterSelection('battery')">Battery</Button>
+				<Button class="btn" onclick="filterSelection('black')">Black</Button>
+				<Button class="btn" onclick="filterSelection('blood')">Blood</Button>
+				<Button class="btn" onclick="filterSelection('blue')">Blue</Button>
+				<Button class="btn" onclick="filterSelection('bomb')">Bomb</Button>
+				<Button class="btn" onclick="filterSelection('bone')">Bone</Button>
+				<Button class="btn" onclick="filterSelection('book')">Book</Button>
+				<Button class="btn" onclick="filterSelection('bottle')">Bottle</Button>
+				<Button class="btn" onclick="filterSelection('box')">Box</Button>
+				<Button class="btn" onclick="filterSelection('brown')">Brown</Button>
+				<Button class="btn" onclick="filterSelection('bum')">Bum</Button>
+				<Button class="btn" onclick="filterSelection('candle')">Candle</Button>
+				<Button class="btn" onclick="filterSelection('card')">Card</Button>
+				<Button class="btn" onclick="filterSelection('circle')">Circle</Button>
+				<Button class="btn" onclick="filterSelection('cross')">Cross</Button>
+				<Button class="btn" onclick="filterSelection('dice')">Dice</Button>
+				<Button class="btn" onclick="filterSelection('electric')">Electric</Button>
+				<Button class="btn" onclick="filterSelection(eye')">Eye</Button>
+				<Button class="btn" onclick="filterSelection('feather')">Feather</Button>
+				<Button class="btn" onclick="filterSelection('fly')">Fly</Button>
+				<Button class="btn" onclick="filterSelection('gore')">Gore</Button>
+				<Button class="btn" onclick="filterSelection('green')">Green</Button>
+				<Button class="btn" onclick="filterSelection('hat')">Hat</Button>
+				<Button class="btn" onclick="filterSelection('head')">Head</Button>
+				<Button class="btn" onclick="filterSelection('holy')">Holy</Button>
+				<Button class="btn" onclick="filterSelection('horn')">Horn</Button>
+				<Button class="btn" onclick="filterSelection('jar')">Jar</Button>
+				<Button class="btn" onclick="filterSelection('jewel')">Jewel</Button>
+				<Button class="btn" onclick="filterSelection('key')">Key</Button>
+				<Button class="btn" onclick="filterSelection('magnet')">Magnet</Button>
+				<Button class="btn" onclick="filterSelection('makeup')">Make Up</Button>
+				<Button class="btn" onclick="filterSelection('medication')">Medication</Button>
+				<Button class="btn" onclick="filterSelection('metal')">Metal</Button>
+				<Button class="btn" onclick="filterSelection('mushroom')">Mushroom</Button>
+				<Button class="btn" onclick="filterSelection('paper')">Paper</Button>
+				<Button class="btn" onclick="filterSelection('pink')">Pink</Button>
+				<Button class="btn" onclick="filterSelection('poop')">Poop</Button>
+				<Button class="btn" onclick="filterSelection('purple')">Purple</Button>
+				<Button class="btn" onclick="filterSelection('rainbow')">Rainbow</Button>
+				<Button class="btn" onclick="filterSelection('rectangle')">Rectangle</Button>
+				<Button class="btn" onclick="filterSelection('red')">Red</Button>
+				<Button class="btn" onclick="filterSelection('rotten')">Rotten</Button>
+				<Button class="btn" onclick="filterSelection('sharp')">Sharp</Button>
+				<Button class="btn" onclick="filterSelection('spider')">Spider</Button>
+				<Button class="btn" onclick="filterSelection('square')">Square</Button>
+				<Button class="btn" onclick="filterSelection('star')">Star</Button>
+				<Button class="btn" onclick="filterSelection('stick')">Stick</Button>
+				<Button class="btn" onclick="filterSelection('stone')">Stone</Button>
+				<Button class="btn" onclick="filterSelection('symbol')">Symbol</Button>
+				<Button class="btn" onclick="filterSelection('tear')">Tear</Button>
+				<Button class="btn" onclick="filterSelection('technology')">Technology</Button>
+				<Button class="btn" onclick="filterSelection('tool')">Tool</Button>
+				<Button class="btn" onclick="filterSelection('tooth')">Tooth</Button>
+				<Button class="btn" onclick="filterSelection('triangle')">Triangle</Button>
+				<Button class="btn" onclick="filterSelection('trinket')">Trinket</Button>
+				<Button class="btn" onclick="filterSelection('vidya')">Video Game</Button>
+				<Button class="btn" onclick="filterSelection('viscera')">Viscera</Button>
+				<Button class="btn" onclick="filterSelection('weapon')">Weapon</Button>
+				<Button class="btn" onclick="filterSelection('white')">White</Button>
+				<Button class="btn" onclick="filterSelection('wooden')">Wooden</Button>
+				<Button class="btn" onclick="filterSelection('worm')">Worm</Button>
+				<Button class="btn" onclick="filterSelection('yellow')">Yellow</Button>
+				<Button class="btn" onclick="filterSelection('zodiac')">Zodiac</Button>
+			</div>
+		</aside>
 		<br>
 		<br>
 			<div class="item_table">
-				<div class="icon">
-					<a href="https://bindingofisaacrebirth.gamepedia.com/A_Pony" target=_blank><img src="icons/active/Collectible_A_Pony_icon.png" alt="A Pony"/></a>
+				<div class="filterDiv animal black">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/A_Pony" target=_blank><img src="icons/active/Collectible_A_Pony_icon.png" alt="A Pony"/></a>
 						<div class="content">
 							<p>
 								<img src="icons/active/Collectible_A_Pony_icon.png" alt="A Pony" style=" margin-right: 20px; display: inline; float: right;"/>
-								<b>A Pony</b>
-								<br>
-								<i> Active Item</i>
-								<br>
+								<b>A Pony</b><br>
+								<i>Active Item</i><br>
 								<br>
 								<div class="desc">
-									Grants flight.
-									<br>
-									Increases speed if less than 1.5.
-									<br>
+									Grants flight.<br>
+									Increases speed if less than 1.5.<br>
 									Upon activation, charges in the direction the pony is facing.
 								</div>
 							</p>
 						</div>
+					</div>
 				</div>
-				<img src="icons/active/Collectible_Anarchist_Cookbook_icon.png" alt="Anarchist Cookbook">
-				<img src="icons/active/Collectible_Best_Friend_icon.png" alt="Best Friend">
-				<img src="icons/active/Collectible_Blank_Card_icon.png" alt="Blank Card">
-				<img src="icons/active/Collectible_Blood_Rights_icon.png" alt="Blood Rights">
-				<img src="icons/active/Collectible_Bob's_Rotten_Head_icon.png" alt="Bob's Rotten Head">
-				<img src="icons/active/Collectible_Book_of_Revelations_icon.png" alt="Book of Revelations">
-				<img src="icons/active/Collectible_Book_of_Secrets_icon.png" alt="Book of Secrets">
-				<img src="icons/active/Collectible_Book_of_Shadows_icon.png" alt="Book of Shadows">
-				<img src="icons/active/Collectible_Box_of_Spiders_Rebirth_icon.png" alt="Box of Spiders">
-				<img src="icons/active/Collectible_Breath_of_Life_icon.png" alt="Breath of Life">
-				<img src="icons/active/Collectible_Butter_Bean_icon.png" alt="Butter Bean">
-				<img src="icons/active/Collectible_Converter_icon.png" alt="Converter">
-				<img src="icons/active/Collectible_Crack_the_Sky_icon.png" alt="Crack the Sky">
-				<img src="icons/active/Collectible_Crystal_Ball_icon.png" alt="Crystal Ball">
+				<div class="filterDiv book">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Anarchist_Cookbook" target=_blank><img src="icons/active/Collectible_Anarchist_Cookbook_icon.png" alt="Anarchist Cookbook"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Anarchist_Cookbook_icon.png" alt="Anarchist Cookbook" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Anarchist Cookbook</b><br>
+								<i>Active Item</i><br>
+								<br>
+								<div class="desc">
+									Spawns 6 troll bombs.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv anatomy pink">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Best_Friend" target=_blank><img src="icons/active/Collectible_Best_Friend_icon.png" alt="Best Friend"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Best_Friend_icon.png" alt="Best Friend" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Best Friend</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Spawns a decoy that explodes after a short while.<br>
+									Enemies will target the decoy until it explodes.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv card rectangle white">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Blank_Card" target=_blank><img src="icons/active/Collectible_Blank_Card_icon.png" alt="Blank Card"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Blank_Card_icon.png" alt="Blank Card" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Blank Card</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Mimics the effects of held card or rune.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv sharp tool">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Blood_Rights" target=_blank><img src="icons/active/Collectible_Blood_Rights_icon.png" alt="Blood Rights"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Blood_Rights_icon.png" alt="Blood Rights" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Blood Rights</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Inflicts one heart of damage to damage all room enemies.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv anatomy bomb green rotten">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Bob%27s_Rotten_Head" target=_blank><img src="icons/active/Collectible_Bob's_Rotten_Head_icon.png" alt="Bob's Rotten Head"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Bob's_Rotten_Head_icon.png" alt="Bob's Rotten Head" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Bob's Rotten Head</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Spawns a poison bomb that can be thrown upon use.<br>
+									<br>
+									Belongs to the <i>Bob set</i>.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv book">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Book_of_Revelations" target=_blank><img src="icons/active/Collectible_Book_of_Revelations_icon.png" alt="Book of Revelations"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Book_of_Revelations_icon.png" alt="Book of Revelations" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Book of Revelations</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Grants a soul heart.<br>
+									Increases chance for a Devil or Angel Room to spawn if held.<br>
+									If used in a map, increases chance for the boss to be replaced by a Harbinger.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv book white">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Book_of_Secrets" target=_blank><img src="icons/active/Collectible_Book_of_Secrets_icon.png" alt="Book of Secrets"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Book_of_Secrets_icon.png" alt="Book of Secrets" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Book of Secrets</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Reveals floor layout, the secret rooms and the special rooms for duration of the floor.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv book">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Book_of_Shadows" target=_blank><img src="icons/active/Collectible_Book_of_Shadows_icon.png" alt="Book of Shadows"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Book_of_Shadows_icon.png" alt="Book of Shadows" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Book of Shadows</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Creates a protective shield nullifying all damage for 10 seconds.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv box spider">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Box_of_Spiders" target=_blank><img src="icons/active/Collectible_Box_of_Spiders_Rebirth_icon.png" alt="Box of Spiders"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Box_of_Spiders_Rebirth_icon.png" alt="Box of Spiders" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Box of Spiders</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Spawns 1-4 Blue Spiders.<br>
+									<br>
+									Belongs to the <i>Spider Baby set</i>.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv white">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Breath_of_Life" target=_blank><img src="icons/active/Collectible_Breath_of_Life_icon.png" alt="Breath of Life"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Breath_of_Life_icon.png" alt="Breath of Life" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Breath of Life</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Grants invincibility after charge bar depletion.<br>
+									Inflicts damage if used after charge bar hitting zero.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv food white">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Butter_Bean" target=_blank><img src="icons/active/Collectible_Butter_Bean_icon.png" alt="Butter Bean"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Butter_Bean_icon.png" alt="Butter Bean" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Butter Bean</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Releases a gas that knocks back enemies and their shots.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv bag">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Converter" target=_blank><img src="icons/active/Collectible_Converter_icon.png" alt="Converter"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Converter_icon.png" alt="Converter" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Converter</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Converts two soul hearts or black hearts into a heart container.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv feather white">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Crack_the_Sky" target=_blank><img src="icons/active/Collectible_Crack_the_Sky_icon.png" alt="Crack the Sky"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Crack_the_Sky_icon.png" alt="Crack the Sky" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Crack the Sky</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									5 beams of light appear, damaging enemies.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv ball">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Crystal_Ball" target=_blank><img src="icons/active/Collectible_Crystal_Ball_icon.png" alt="Crystal Ball"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Crystal_Ball_icon.png" alt="Crystal Ball" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Crystal Ball</b>
+								<br>
+								<i>Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Reveals the floor layout and the special rooms (except Super Secret Room).<br>
+									Either drops a soul heart or a random Tarot Card/Rune.
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
 				<img src="icons/active/Collectible_D10_icon.png" alt="D10">
 				<img src="icons/active/Collectible_D100_icon.png" alt="D100">
 				<img src="icons/active/Collectible_D20_Rebirth_icon.png" alt="D20">
@@ -863,4 +1074,48 @@
 				<img src="icons/runes/38px-Pickup_Dice_Shard_icon.png" alt="Dice Shard" height="27" width="20" style="padding: 3px; margin-left: 6px; margin-bottom: 3px">
 			</div>
 	</body>
+	<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 </html>

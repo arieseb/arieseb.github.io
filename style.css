@@ -3,6 +3,10 @@ body
 	background-color: #6b4537;
 }
 
+aside {
+	
+}
+
 h1 {
 	text-align: center;
 	color: #e6e6e6;
@@ -33,4 +37,31 @@ h1 {
 .desc {
 	text-align: left;
 	font-size: 16px;
+}
+
+.filterDiv {
+  float: left;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+  cursor: pointer;
 }
