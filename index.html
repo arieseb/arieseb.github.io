@@ -1,11 +1,866 @@
-<h1>Interactive Item Table</h1>
-<body>
- <input width=400></input>
- <br>
- <table>
-  <caption>Item Table</caption>
-  <tr>
-   <img>/icons/Collectible_A_Pony_icon.png</img>
-  </tr>
- </table>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+	<header>
+		<h1><i>The Binding of Isaac: Rebirth</i> Interactive Item Table</h1>
+	</header>
+	<body>
+		<p>
+				<input type="text" placeholder="Search for items" onkeyup="itemfilter()"></input>
+				<input type="submit" name="form" value="Search">
+				<datalist id="tags">
+					<option value="Anatomy">
+					<option value="Animal">
+					<option value="Apparel">
+					<option value="Arrow">
+					<option value="Baby">
+				<option value="Bag">
+				<option value="Ball">
+				<option value="Bandage">
+				<option value="Bat">
+				<option value="Battery">
+				<option value="Bean">
+				<option value="Belt">
+				<option value="Bird">
+				<option value="Black">
+				<option value="Blood">
+				<option value="Blue">
+				<option value="Bomb">
+				<option value="Bone">
+				<option value="Book">
+				<option value="Bottle">
+				<option value="Box">
+				<option value="Brown">
+				<option value="Bug">
+				<option value="Bum">
+				<option value="Candle">
+				<option value="Card">
+				<option value="Cat">
+				<option value="Circle">
+				<option value="Cloth">
+				<option value="Coin">
+				<option value="Cross">
+				<option value="Crown">
+				<option value="Dice">
+				<option value="Dog">
+				<option value="Drop">
+				<option value="Egg">
+				<option value="Electric">
+				<option value="Eye">
+				<option value="Feather">
+				<option value="Fire">
+				<option value="Food">
+				<option value="Fly">
+				<option value="Glass">
+				<option value="Goat">
+				<option value="Golden">
+				<option value="Googles">
+				<option value="Gore">
+				<option value="Green">
+				<option value="Hat">
+				<option value="Head">
+				<option value="Holy">
+				<option value="Horn">
+				<option value="Horse">
+				<option value="Interrogation Mark">
+				<option value="Jar">
+				<option value="Jewel">
+				<option value="Key">
+				<option value="Knife">
+				<option value="Magnet">
+				<option value="Make up">
+				<option value="Match">
+				<option value="Metal">
+				<option value="Mushroom">
+				<option value="Number">
+				<option value="Paper">
+				<option value="Photo">
+				<option value="Pill">
+				<option value="Pink">
+				<option value="Purple">
+				<option value="Rainbow">
+				<option value="Razor">
+				<option value="Rectangle">
+				<option value="Red">
+				<option value="Remote">
+				<option value="Rotten">
+				<option value="Rune">
+				<option value="Shadow">
+				<option value="Sharp">
+				<option value="Skull">
+				<option value="Spider">
+				<option value="Square">
+				<option value="Star">
+				<option value="Stick">
+				<option value="Stone">
+				<option value="Symbol">
+				<option value="Syringe">
+				<option value="Teal">
+				<option value="Tear">
+				<option value="Technology">
+				<option value="Tool">
+				<option value="Tooth">
+				<option value="Triangle">
+				<option value="Underwear">
+				<option value="Video Game">
+				<option value="Viscera">
+				<option value="Weapon">
+				<option value="White">
+				<option value="Wood">
+				<option value="Worm">
+				<option value="Yellow">
+				<option value="Zodiac">
+			</datalist>
+		</p>
+		<br>
+		<br>
+			<div class="item_table">
+				<div class="icon">
+					<a href="https://bindingofisaacrebirth.gamepedia.com/A_Pony" target=_blank><img src="icons/active/Collectible_A_Pony_icon.png" alt="A Pony"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_A_Pony_icon.png" alt="A Pony" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>A Pony</b>
+								<br>
+								<i> Active Item</i>
+								<br>
+								<br>
+								<div class="desc">
+									Grants flight.
+									<br>
+									Increases speed if less than 1.5.
+									<br>
+									Upon activation, charges in the direction the pony is facing.
+								</div>
+							</p>
+						</div>
+				</div>
+				<img src="icons/active/Collectible_Anarchist_Cookbook_icon.png" alt="Anarchist Cookbook">
+				<img src="icons/active/Collectible_Best_Friend_icon.png" alt="Best Friend">
+				<img src="icons/active/Collectible_Blank_Card_icon.png" alt="Blank Card">
+				<img src="icons/active/Collectible_Blood_Rights_icon.png" alt="Blood Rights">
+				<img src="icons/active/Collectible_Bob's_Rotten_Head_icon.png" alt="Bob's Rotten Head">
+				<img src="icons/active/Collectible_Book_of_Revelations_icon.png" alt="Book of Revelations">
+				<img src="icons/active/Collectible_Book_of_Secrets_icon.png" alt="Book of Secrets">
+				<img src="icons/active/Collectible_Book_of_Shadows_icon.png" alt="Book of Shadows">
+				<img src="icons/active/Collectible_Box_of_Spiders_Rebirth_icon.png" alt="Box of Spiders">
+				<img src="icons/active/Collectible_Breath_of_Life_icon.png" alt="Breath of Life">
+				<img src="icons/active/Collectible_Butter_Bean_icon.png" alt="Butter Bean">
+				<img src="icons/active/Collectible_Converter_icon.png" alt="Converter">
+				<img src="icons/active/Collectible_Crack_the_Sky_icon.png" alt="Crack the Sky">
+				<img src="icons/active/Collectible_Crystal_Ball_icon.png" alt="Crystal Ball">
+				<img src="icons/active/Collectible_D10_icon.png" alt="D10">
+				<img src="icons/active/Collectible_D100_icon.png" alt="D100">
+				<img src="icons/active/Collectible_D20_Rebirth_icon.png" alt="D20">
+				<img src="icons/active/Collectible_D4_icon.png" alt="D4">
+				<img src="icons/active/Collectible_Dad's_Key_icon.png" alt="Dad's Key">
+				<img src="icons/active/Collectible_Dead_Sea_Scrolls_icon.png" alt="Dead Sea Scrolls">
+				<img src="icons/active/Collectible_Deck_of_Cards_icon.png" alt="Deck of Cards">
+				<img src="icons/active/Collectible_Doctor's_Remote_icon.png" alt="Doctor's Remote">
+				<img src="icons/active/Collectible_Flush!_icon.png" alt="Flush!">
+				<img src="icons/active/Collectible_Forget_Me_Now_icon.png" alt="Forget Me Now">
+				<img src="icons/active/Collectible_Guppy's_Head_icon.png" alt="Guppy's Head">
+				<img src="icons/active/Collectible_Guppy's_Paw_icon.png" alt="Guppy's Paw">
+				<img src="icons/active/Collectible_Head_of_Krampus_icon.png" alt="Head of Krampus">
+				<img src="icons/active/Collectible_How_to_Jump_icon.png" alt="How to Jump">
+				<img src="icons/active/Collectible_Isaac's_Tears_Rebirth_icon.png" alt="Isaac's Tears">
+				<img src="icons/active/Collectible_IV_Bag_icon.png" alt="IV Bag">
+				<img src="icons/active/Collectible_Kamikaze!_icon.png" alt="Kamikaze!">
+				<img src="icons/active/Lemon_Mishap_Icon.png" alt="Lemon Mishap">
+				<img src="icons/active/Collectible_Magic_Fingers_icon.png" alt="Magic Fingers">
+				<img src="icons/active/Collectible_Mom's_Bottle_of_Pills_icon.png" alt="Mom's Bottle of Pills">
+				<img src="icons/active/Collectible_Mom's_Bra_icon.png" alt="Mom's Bra">
+				<img src="icons/active/Collectible_Mom's_Pad_icon.png" alt="Mom's Pad">
+				<img src="icons/active/Collectible_Monster_Manual_icon.png" alt="Monster Manual">
+				<img src="icons/active/Collectible_Monstro's_Tooth_icon.png" alt="Monstro's Tooth">
+				<img src="icons/active/Collectible_Mr._Boom_icon.png" alt="Mr. Boom">
+				<img src="icons/active/Collectible_My_Little_Unicorn_icon.png" alt="My Little Unicorn">
+				<img src="icons/active/Collectible_Notched_Axe_icon.png" alt="Notched Axe">
+				<img src="icons/active/Collectible_Pandora's_Box_icon.png" alt="Pandora's Box">
+				<img src="icons/active/Collectible_Portable_Slot_icon.png" alt="Portable Slot">
+				<img src="icons/active/Collectible_Prayer_Card_icon.png" alt="Prayer Card">
+				<img src="icons/active/Collectible_Razor_Blade_icon.png" alt="Razor Blade">
+				<img src="icons/active/Collectible_Red_Candle_icon.png" alt="Red Candle">
+				<img src="icons/active/Remote_Detonator_Icon.png" alt="Remote Detonator">
+				<img src="icons/active/Collectible_Satanic_Bible_icon.png" alt="Satanic Bible">
+				<img src="icons/active/Collectible_Scissors_icon.png" alt="Scissors">
+				<img src="icons/active/Shoop_Da_Whoop!_Icon.png" alt="Shoop Da Whoop!">
+				<img src="icons/active/Spider_Butt_Icon.png" alt="Spider Butt">
+				<img src="icons/active/Tammy's_Head_Icon.png" alt="Tammy's Head">
+				<img src="icons/active/Telepathy_for_Dummies_Icon.png" alt="Telepathy for Dummies">
+				<img src="icons/active/Teleport_Icon.png" alt="Teleport">
+				<img src="icons/active/The_Bean_Icon.png" alt="The Bean">
+				<img src="icons/active/The_Bible_Icon.png" alt="The Bible">
+				<img src="icons/active/The_Book_of_Belial_Icon.png" alt="The Book of Belial">
+				<img src="icons/active/The_Book_of_Sin_Icon.png" alt="The Book of Sin">
+				<img src="icons/active/The_Boomerang_Rebirth_Icon.png" alt="The Boomerang">
+				<img src="icons/active/The_Candle_Icon.png" alt="The Candle">
+				<img src="icons/active/The_D6_Icon.png" alt="The D6">
+				<img src="icons/active/Collectible_The_Gamekid_icon.png" alt="The Gamekid">
+				<img src="icons/active/Collectible_The_Hourglass_icon.png" alt="The Hourglass">
+				<img src="icons/active/Collectible_The_Jar_Rebirth_icon.png" alt="The Jar">
+				<img src="icons/active/Collectible_The_Nail_icon.png" alt="The Nail">
+				<img src="icons/active/Collectible_The_Necronomicon_icon.png" alt="The Necronomicon">
+				<img src="icons/active/Collectible_The_Pinking_Shears_icon.png" alt="The Pinking Shears">
+				<img src="icons/active/Collectible_The_Poop_icon.png" alt="The Poop">
+				<img src="icons/active/Collectible_Undefined_icon.png" alt="Undefined">
+				<img src="icons/active/Collectible_Unicorn_Stump_icon.png" alt="Unicorn Stump">
+				<img src="icons/active/Collectible_We_Need_to_Go_Deeper!_Rebirth_icon.png" alt="We Need to Go Deeper!">
+				<img src="icons/active/Collectible_White_Pony_icon.png" alt="White Pony">
+				<img src="icons/active/Collectible_Yum_Heart_icon.png" alt="Yum Heart">
+				<img src="icons/active/Collectible_Box_of_Friends_icon.png" alt="Box of Friends">
+				<img src="icons/active/Collectible_D12_icon.png" alt="D12">
+				<img src="icons/active/Collectible_D7_Afterbirth_icon.png" alt="D7">
+				<img src="icons/active/Collectible_D8_icon.png" alt="D8">
+				<img src="icons/active/Collectible_Diplopia_icon.png" alt="Diplopia">
+				<img src="icons/active/Collectible_Friendly_Ball_icon.png" alt="Friendly Ball">
+				<img src="icons/active/Collectible_Glass_Cannon_Afterbirth_icon.png" alt="Glass Cannon">
+				<img src="icons/active/Collectible_Glowing_Hour_Glass_icon.png" alt="Glowing Hour Glass">
+				<img src="icons/active/Collectible_Jar_of_Flies_Afterbirth_icon.png" alt="Jar of Flies">
+				<img src="icons/active/Collectible_Kidney_Bean_icon.png" alt="Kidney Bean">
+				<img src="icons/active/Collectible_Mega_Bean_icon.png" alt="Mega Bean">
+				<img src="icons/active/Collectible_Mega_Blast_Afterbirth_icon.png" alt="Mega Blast">
+				<img src="icons/active/Collectible_Mine_Crafter_icon.png" alt="Mine Crafter">
+				<img src="icons/active/Collectible_Mom's_Box_icon.png" alt="Mom's Box">
+				<img src="icons/active/Collectible_Placebo_icon.png" alt="Placebo">
+				<img src="icons/active/Tear_Detonator_Icon.png" alt="Tear Detonator">
+				<img src="icons/active/Teleport_2.0_Icon.png" alt="Teleport 2.0">
+				<img src="icons/active/Collectible_Ventricle_Razor_Afterbirth_icon.png" alt="Ventricle Razor">
+				<img src="icons/active/Collectible_Wooden_Nickel_icon.png" alt="Wooden Nickel">
+				<img src="icons/active/Collectible_Black_Hole_icon.png" alt="Black Hole">
+				<img src="icons/active/Collectible_Book_of_the_Dead_icon.png" alt="Book of the Dead">
+				<img src="icons/active/Collectible_Broken_Shovel_1_icon.png" alt="Broken Shovel">
+				<img src="icons/active/Collectible_Brown_Nugget_icon.png" alt="Brown Nugget">
+				<img src="icons/active/Collectible_Clicker_icon.png" alt="Clicker">
+				<img src="icons/active/Collectible_Compost_icon.png" alt="Compost">
+				<img src="icons/active/Collectible_Coupon_icon.png" alt="Coupon">
+				<img src="icons/active/Collectible_Crooked_Penny_icon.png" alt="Crooked Penny">
+				<img src="icons/active/Collectible_D_Infinity_icon.png" alt="D Infinty">
+				<img src="icons/active/Collectible_D1_icon.png" alt="D1">
+				<img src="icons/active/Collectible_Dataminer_icon.png" alt="Dataminer">
+				<img src="icons/active/Collectible_Delirious_icon.png" alt="Delirious">
+				<img src="icons/active/Collectible_Dull_Razor_icon.png" alt="Dull Razor">
+				<img src="icons/active/Collectible_Eden's_Soul_icon.png" alt="Eden's Soul">
+				<img src="icons/active/Collectible_Mama_Mega!_icon.png" alt="Mamma Mega!">
+				<img src="icons/active/Collectible_Metronome_icon.png" alt="Metronome">
+				<img src="icons/active/Collectible_Mom's_Shovel_icon.png" alt="Mom's Shovel">
+				<img src="icons/active/Collectible_Moving_Box_icon.png" alt="Moving Box">
+				<img src="icons/active/Collectible_Mr._ME!_icon.png" alt="Mr. ME">
+				<img src="icons/active/Collectible_Mystery_Gift_icon.png" alt="Mystery Gift">
+				<img src="icons/active/Collectible_Pause_icon.png" alt="Pause">
+				<img src="icons/active/Collectible_Plan_C_icon.png" alt="Plan C">
+				<img src="icons/active/Collectible_Potato_Peeler_icon.png" alt="Potato Peeler">
+				<img src="icons/active/Collectible_Sacrificial_Altar_icon.png" alt="Sacrificial Altar">
+				<img src="icons/active/Sharp_Straw_Icon.png" alt="Sharp Straw">
+				<img src="icons/active/Smelter_Icon.png" alt="Smelter">
+				<img src="icons/active/Sprinkler_Icon.png" alt="Sprinkler">
+				<img src="icons/active/Telekinesis_Icon.png" alt="Telekinesis">
+				<img src="icons/active/Collectible_Void_icon.png" alt="Void">
+				<img src="icons/active/Collectible_Wait_What_icon.png" alt="Wait What?">
+				<img src="icons/passive/Collectible_Blue_Baby's_Only_Friend_icon.png" alt="???'s Only Friend">
+				<img src="icons/passive/1up!_icon.png" alt="1up!">
+				<img src="icons/passive/20_20_Rebirth_Icon.png" alt="20/20">
+				<img src="icons/passive/3_Dollar_Bill_Icon.png" alt="3 Dollar Bill">
+				<img src="icons/passive/Collectible_9_Volt_icon.png" alt="9 Volt">
+				<img src="icons/passive/Collectible_A_Dollar_icon.png" alt="A Dollar">
+				<img src="icons/passive/Collectible_A_Lump_of_Coal_icon.png" alt="A Lump of Coal">
+				<img src="icons/passive/Collectible_A_Quarter_icon.png" alt="A Quarter">
+				<img src="icons/passive/Collectible_A_Snack_icon.png" alt="A Snack">
+				<img src="icons/passive/Collectible_Abaddon_Rebirth_icon.png" alt="Abaddon">
+				<img src="icons/passive/Collectible_Abel_icon.png" alt="Abel">
+				<img src="icons/passive/Collectible_Anemic_Rebirth_icon.png" alt="Anemic">
+				<img src="icons/passive/Collectible_Ankh_icon.png" alt="Ankh">
+				<img src="icons/passive/Collectible_Anti-Gravity_icon.png" alt="Anti-Gravity">
+				<img src="icons/passive/Collectible_Aquarius_Rebirth_icon.png" alt="Aquarius">
+				<img src="icons/passive/Collectible_Aries_icon.png" alt="Aries">
+				<img src="icons/passive/Collectible_Ball_of_Bandages_icon.png" alt="Ball of Bandages">
+				<img src="icons/passive/Collectible_Ball_of_Tar_icon.png" alt="Ball of Tar">
+				<img src="icons/passive/Collectible_BBF_icon.png" alt="BBF">
+				<img src="icons/passive/Collectible_Best_Bud_Rebirth_icon.png" alt="Best Bud">
+				<img src="icons/passive/Collectible_BFFS!_icon.png" alt="BFFS!">
+				<img src="icons/passive/Collectible_Big_Fan_icon.png" alt="Big Fan">
+				<img src="icons/passive/Collectible_Black_Candle_icon.png" alt="Black Candle">
+				<img src="icons/passive/Collectible_Black_Lotus_Rebirth_icon.png" alt="Black Lotus">
+				<img src="icons/passive/Collectible_Blood_Bag_icon.png" alt="Blood Bag">
+				<img src="icons/passive/Collectible_Blood_Clot_icon.png" alt="Blood Clot">
+				<img src="icons/passive/Collectible_Blood_of_the_Martyr_icon.png" alt="Blood of the Martyr">
+				<img src="icons/passive/Collectible_Bloody_Lust_icon.png" alt="Bloody Lust">
+				<img src="icons/passive/Collectible_Blue_Cap_icon.png" alt="Blue Cap">
+				<img src="icons/passive/Collectible_Blue_Map_icon.png" alt="Blue Map">
+				<img src="icons/passive/Collectible_Bob's_Brain_icon.png" alt="Bob's Brain">
+				<img src="icons/passive/Collectible_Bob's_Curse_Rebirth_icon.png" alt="Bob's Curse">
+				<img src="icons/passive/Collectible_Bobby-Bomb_icon.png" alt="Bobby Bomb">
+				<img src="icons/passive/Collectible_Bogo_Bombs_icon.png" alt="Bogo Bombs">
+				<img src="icons/passive/Collectible_Bomb_Bag_icon.png" alt="Bomb Bag">
+				<img src="icons/passive/Collectible_Boom!_icon.png" alt="Boom!">
+				<img src="icons/passive/Collectible_Box_Rebirth_icon.png" alt="Box">
+				<img src="icons/passive/Collectible_Breakfast_icon.png" alt="Breakfast">
+				<img src="icons/passive/Collectible_Brimstone_Rebirth_icon.png" alt="Brimstone">
+				<img src="icons/passive/Collectible_Broken_Watch_icon.png" alt="Broken Watch">
+				<img src="icons/passive/Collectible_Brother_Bobby_Rebirth_icon.png" alt="Brother Bobby">
+				<img src="icons/passive/Collectible_Bucket_of_Lard_icon.png" alt="Bucket of Lard">
+				<img src="icons/passive/Collectible_Bum_Friend_Rebirth_icon.png" alt="Bum Friend">
+				<img src="icons/passive/Collectible_Butt_Bombs_icon.png" alt="Butt Bombs">
+				<img src="icons/passive/Collectible_Caffeine_Pill_Rebirth_icon.png" alt="Caffeine Pill">
+				<img src="icons/passive/Collectible_Cain's_Other_Eye_icon.png" alt="Cain's Other Eye">
+				<img src="icons/passive/Collectible_Cancer_Rebirth_icon.png" alt="Cancer">
+				<img src="icons/passive/Collectible_Capricorn_icon.png" alt="Capricorn">
+				<img src="icons/passive/Collectible_Cat-O-Nine-Tails_icon.png" alt="Cat-O-Nine-Tails">
+				<img src="icons/passive/Collectible_Celtic_Cross_Rebirth_icon.png" alt="Celtic Cross">
+				<img src="icons/passive/Collectible_Ceremonial_Robes_icon.png" alt="Ceremonial Robes">
+				<img src="icons/passive/Champion_Belt_Icon.png" alt="Champion Belt">
+				<img src="icons/passive/Collectible_Charm_of_the_Vampire_icon.png" alt="Charm of the Vampire">
+				<img src="icons/passive/Collectible_Chemical_Peel_icon.png" alt="Chemical Peel">
+				<img src="icons/passive/Collectible_Chocolate_Milk_icon.png" alt="Chocolate Milk">
+				<img src="icons/passive/Collectible_Contract_From_Below_icon.png" alt="Contract from Below">
+				<img src="icons/passive/Collectible_Cricket's_Body_icon.png" alt="Cricket's Body">
+				<img src="icons/passive/Collectible_Cricket's_Head_Rebirth_icon.png" alt="Cricket's Head">
+				<img src="icons/passive/Collectible_Cube_of_Meat_icon.png" alt="Cube of Meat">
+				<img src="icons/passive/Collectible_Cupid's_Arrow_Rebirth_icon.png" alt="Cupid's Arrow">
+				<img src="icons/passive/Collectible_Cursed_Eye_icon.png" alt="Cursed Eye">
+				<img src="icons/passive/Collectible_Daddy_Longlegs_Rebirth_icon.png" alt="Daddy LongLegs">
+				<img src="icons/passive/Collectible_Dark_Bum_Rebirth_icon.png" alt="Dark Bum">
+				<img src="icons/passive/Collectible_Dark_Matter_icon.png" alt="Dark Matter">
+				<img src="icons/passive/Collectible_Dead_Bird_icon.png" alt="Dead Bird">
+				<img src="icons/passive/Collectible_Dead_Cat_icon.png" alt="Dead Cat">
+				<img src="icons/passive/Collectible_Dead_Dove_icon.png" alt="Dead Dove">
+				<img src="icons/passive/Collectible_Dead_Onion_icon.png" alt="Dead Onion">
+				<img src="icons/passive/Collectible_Death's_Touch_icon.png" alt="Death's Touch">
+				<img src="icons/passive/Collectible_Demon_Baby_Rebirth_icon.png" alt="Demon Baby">
+				<img src="icons/passive/Collectible_Dessert_icon.png" alt="Dessert">
+				<img src="icons/passive/Collectible_Dinner_icon.png" alt="Dinner">
+				<img src="icons/passive/Collectible_Distant_Admiration_Rebirth_icon.png" alt="Distant Admiration">
+				<img src="icons/passive/Collectible_Dr._Fetus_icon.png" alt="Dr. Fetus">
+				<img src="icons/passive/Collectible_Dry_Baby_icon.png" alt="Dry Baby">
+				<img src="icons/passive/Collectible_E_Coli_icon.png" alt="E Coli">
+				<img src="icons/passive/Collectible_Epic_Fetus_icon.png" alt="Epic Fetus">
+				<img src="icons/passive/Collectible_Eve's_Mascara_icon.png" alt="Eve's Mascara">
+				<img src="icons/passive/Collectible_Experimental_Treatment_icon.png" alt="Experimental Treatment">
+				<img src="icons/passive/Collectible_Fanny_Pack_icon.png" alt="Fanny Pack">
+				<img src="icons/passive/Collectible_Fate_icon.png" alt="Fate">
+				<img src="icons/passive/Collectible_Fire_Mind_icon.png" alt="Fire Mind">
+				<img src="icons/passive/Collectible_Forever_Alone_Rebirth_icon.png" alt="Forever Alone">
+				<img src="icons/passive/Collectible_Gemini_Rebirth_icon.png" alt="Gemini">
+				<img src="icons/passive/Collectible_Ghost_Baby_Rebirth_icon.png" alt="Ghost Baby">
+				<img src="icons/passive/Collectible_Gimpy_icon.png" alt="Gimpy">
+				<img src="icons/passive/Collectible_Gnawed_Leaf_icon.png" alt="Gnawed Leaf">
+				<img src="icons/passive/Collectible_Goat_Head_Rebirth_icon.png" alt="Goat Head">
+				<img src="icons/passive/Collectible_Godhead_icon.png" alt="Godhead">
+				<img src="icons/passive/Collectible_Growth_Hormones_icon.png" alt="Growth Hormones">
+				<img src="icons/passive/Collectible_Guardian_Angel_icon.png" alt="Guardian Angel">
+				<img src="icons/passive/Collectible_Guillotine_icon.png" alt="Guillotine">
+				<img src="icons/passive/Collectible_Guppy's_Collar_icon.png" alt="Guppy's Collar">
+				<img src="icons/passive/Collectible_Guppy's_Hair_Ball_Rebirth_icon.png" alt="Guppy's Hair Ball">
+				<img src="icons/passive/Collectible_Guppy's_Tail_icon.png" alt="Guppy's Tail">
+				<img src="icons/passive/Collectible_Habit_Rebirth_icon.png" alt="Habit">
+				<img src="icons/passive/Collectible_Halo_of_Flies_icon.png" alt="Halo of Flies">
+				<img src="icons/passive/Collectible_Harlequin_Baby_Rebirth_icon.png" alt="Harlequin Baby">
+				<img src="icons/passive/Collectible_Headless_Baby_icon.png" alt="Headless Baby">
+				<img src="icons/passive/Collectible_Hive_Mind_icon.png" alt="Hive Mind">
+				<img src="icons/passive/Collectible_Holy_Grail_icon.png" alt="Holy Grail">
+				<img src="icons/passive/Collectible_Holy_Mantle_icon.png" alt="Holy Mantle">
+				<img src="icons/passive/Collectible_Holy_Water_Rebirth_icon.png" alt="Holy Water">
+				<img src="icons/passive/Collectible_Hot_Bombs_icon.png" alt="Hot Bombs">
+				<img src="icons/passive/Collectible_Humbling_Bundle_icon.png" alt="Humbling Bundle">
+				<img src="icons/passive/Collectible_Infamy_icon.png" alt="Infamy">
+				<img src="icons/passive/Collectible_Infestation_Rebirth_icon.png" alt="Infestation">
+				<img src="icons/passive/Collectible_Infestation_2_icon.png" alt="Infestation 2">
+				<img src="icons/passive/Collectible_Ipecac_icon.png" alt="Ipecac">
+				<img src="icons/passive/Collectible_Iron_Bar_icon.png" alt="Iron Bar">
+				<img src="icons/passive/Collectible_Isaac's_Heart_icon.png" alt="Isaac's Heart">
+				<img src="icons/passive/Collectible_Jesus_Juice_icon.png" alt="Jesus Juice">
+				<img src="icons/passive/Collectible_Judas'_Shadow_icon.png" alt="Judas' Shadow">
+				<img src="icons/passive/Collectible_Juicy_Sack_icon.png" alt="Juicy Sack">
+				<img src="icons/passive/Collectible_Key_Piece_1_icon.png" alt="Key Piece 1">
+				<img src="icons/passive/Collectible_Key_Piece_2_Rebirth_icon.png" alt="Key Piece 2">
+				<img src="icons/passive/Collectible_Latch_Key_icon.png" alt="Latch Key">
+				<img src="icons/passive/Collectible_Lazarus'_Rags_icon.png" alt="Lazarus' Rags">
+				<img src="icons/passive/Leech_Icon.png" alt="Leech">
+				<img src="icons/passive/Collectible_Leo_icon.png" alt="Leo">
+				<img src="icons/passive/Collectible_Less_Than_Three_Rebirth_icon.png" alt="<3">
+				<img src="icons/passive/Collectible_Libra_icon.png" alt="Libra">
+				<img src="icons/passive/Collectible_Lil_Brimstone_Rebirth_icon.png" alt="Lil' Brimstone">
+				<img src="icons/passive/Collectible_Lil_Haunt_icon.png" alt="Lil' Haunt">
+				<img src="icons/passive/Collectible_Little_Baggy_icon.png" alt="Little Baggy">
+				<img src="icons/passive/Collectible_Little_C.H.A.D._icon.png" alt="Little C.H.A.D.">
+				<img src="icons/passive/Collectible_Little_Chubby_icon.png" alt="Little Chubby">
+				<img src="icons/passive/Collectible_Little_Gish_icon.png" alt="Little Gish">
+				<img src="icons/passive/Collectible_Little_Steven_icon.png" alt="Little Steven">
+				<img src="icons/passive/Collectible_Loki's_Horns_icon.png" alt="Loki's Horns">
+				<img src="icons/passive/Collectible_Lord_of_the_Pit_Rebirth_icon.png" alt="Lord of the Pit">
+				<img src="icons/passive/Collectible_Lost_Contact_icon.png" alt="Lost Contact">
+				<img src="icons/passive/Collectible_Lucky_Foot_Rebirth_icon.png" alt="Lucky Foot">
+				<img src="icons/passive/Collectible_Lunch_icon.png" alt="Lunch">
+				<img src="icons/passive/Collectible_Maggy's_Bow_icon.png" alt="Maggy's Bow">
+				<img src="icons/passive/Collectible_Magic_8_Ball_Rebirth_icon.png" alt="Magic 8 Ball">
+				<img src="icons/passive/Collectible_Magic_Mushroom_icon.png" alt="Magic Mushroom">
+				<img src="icons/passive/Collectible_Magic_Scab_icon.png" alt="Magic Scab">
+				<img src="icons/passive/Trinket_Magneto_Rebirth_icon.png" alt="Magneto">
+				<img src="icons/passive/Collectible_Match_Book_icon.png" alt="Match Book">
+				<img src="icons/passive/Collectible_MEAT!_icon.png" alt="MEAT!">
+				<img src="icons/passive/Collectible_Midas'_Touch_icon.png" alt="Midas' Touch">
+				<img src="icons/passive/Collectible_Mini_Mush_icon.png" alt="Mini Mush">
+				<img src="icons/passive/Collectible_Missing_No._icon.png" alt="Missing No.">
+				<img src="icons/passive/Collectible_Missing_Page_2_icon.png" alt="Missing Page 2">
+				<img src="icons/passive/Collectible_Mitre_Rebirth_icon.png" alt="Mitre">
+				<img src="icons/passive/Collectible_Mom's_Coin_Purse_icon.png" alt="Mom's Coin Purse">
+				<img src="icons/passive/Collectible_Mom's_Contacts_Rebirth_icon.png" alt="Mom's Contacts">
+				<img src="icons/passive/Collectible_Mom's_Eye_Rebirth_icon.png" alt="Mom's Eye">
+				<img src="icons/passive/Collectible_Mom's_Eyeshadow_icon.png" alt="Mom's Eyeshadow">
+				<img src="icons/passive/Collectible_Mom's_Heels_icon.png" alt="Mom's Heels">
+				<img src="icons/passive/Collectible_Mom's_Key_icon.png" alt="Mom's Key">
+				<img src="icons/passive/Collectible_Mom's_Knife_Rebirth_icon.png" alt="Mom's Knife">
+				<img src="icons/passive/Collectible_Mom's_Lipstick_icon.png" alt="Mom's Lipstick">
+				<img src="icons/passive/Collectible_Mom's_Perfume_icon.png" alt="Mom's Perfume">
+				<img src="icons/passive/Collectible_Mom's_Purse_icon.png" alt="Mom's Purse">
+				<img src="icons/passive/Collectible_Mom's_Underwear_icon.png" alt="Mom's Underwear">
+				<img src="icons/passive/Collectible_Mom's_Wig_icon.png" alt="Mom's Wig">
+				<img src="icons/passive/Collectible_Money_=_Power_Rebirth_icon.png" alt="Money = Power">
+				<img src="icons/passive/Collectible_Mongo_Baby_icon.png" alt="Mongo Baby">
+				<img src="icons/passive/Collectible_Monstro's_Lung_icon.png" alt="Monstro's Lung">
+				<img src="icons/passive/Collectible_Mr._Mega_icon.png" alt="Mr. Mega">
+				<img src="icons/passive/Collectible_Mutant_Spider_icon.png" alt="Mutant Spider">
+				<img src="icons/passive/Collectible_My_Reflection_icon.png" alt="My Reflection">
+				<img src="icons/passive/Collectible_Mysterious_Liquid_icon.png" alt="Mysterious Liquid">
+				<img src="icons/passive/Collectible_Mystery_Sack_icon.png" alt="Mystery Sack">
+				<img src="icons/passive/Collectible_Number_One_icon.png" alt="Number One">
+				<img src="icons/passive/Collectible_Odd_Mushroom_(Large)_icon.png" alt="Odd Mushroom">
+				<img src="icons/passive/Collectible_Odd_Mushroom_(Thin)_icon.png" alt="Odd Mushroom">
+				<img src="icons/passive/Collectible_Old_Bandage_icon.png" alt="Old Bandage">
+				<img src="icons/passive/Collectible_Ouija_Board_icon.png" alt="Ouija Board">
+				<img src="icons/passive/Collectible_Pageant_Boy_icon.png" alt="Pageant Boy">
+				<img src="icons/passive/Collectible_Pentagram_Rebirth_icon.png" alt="Pentagram">
+				<img src="icons/passive/Collectible_PHD_icon.png" alt="PHD">
+				<img src="icons/passive/Collectible_Piggy_Bank_Rebirth_icon.png" alt="Piggy Bank">
+				<img src="icons/passive/Collectible_Pisces_icon.png" alt="Pisces">
+				<img src="icons/passive/Collectible_Placenta_icon.png" alt="Placenta">
+				<img src="icons/passive/Collectible_Polyphemus_Rebirth_icon.png" alt="Polyphemus">
+				<img src="icons/passive/Collectible_Proptosis_Rebirth_icon.png" alt="Proptosis">
+				<img src="icons/passive/Collectible_Punching_Bag_icon.png" alt="Punching Bag">
+				<img src="icons/passive/Collectible_Pyro_Rebirth_icon.png" alt="Pyro">
+				<img src="icons/passive/Collectible_Pyromaniac_icon.png" alt="Pyromaniac">
+				<img src="icons/passive/Collectible_Rainbow_Baby_Rebirth_icon.png" alt="Rainbow Baby">
+				<img src="icons/passive/Collectible_Raw_Liver_icon.png" alt="Raw Liver">
+				<img src="icons/passive/Collectible_Robo-Baby_Rebirth_icon.png" alt="Robo-Baby">
+				<img src="icons/passive/Collectible_Robo-Baby_2.0_Rebirth_icon.png" alt="Robo-Baby 2.0">
+				<img src="icons/passive/Collectible_Roid_Rage_icon.png" alt="Roid Rage">
+				<img src="icons/passive/Collectible_Rosary_icon.png" alt="Rosary">
+				<img src="icons/passive/Collectible_Rotten_Baby_icon.png" alt="Rotten Baby">
+				<img src="icons/passive/Collectible_Rotten_Meat_icon.png" alt="Rotten Meat">
+				<img src="icons/passive/Collectible_Rubber_Cement_icon.png" alt="Rubber Cement">
+				<img src="icons/passive/Collectible_Sack_of_Pennies_icon.png" alt="Sack of Pennies">
+				<img src="icons/passive/Collectible_Sacred_Heart_icon.png" alt="Sacred Heart">
+				<img src="icons/passive/Collectible_Sacrificial_Dagger_Rebirth_icon.png" alt="Sacrificial Dagger">
+				<img src="icons/passive/Collectible_Sad_Bombs_Rebirth_icon.png" alt="Sad Bombs">
+				<img src="icons/passive/Collectible_Safety_Pin_icon.png" alt="Safety Pin">
+				<img src="icons/passive/Collectible_Sagittarius_Rebirth_icon.png" alt="Sagittarius">
+				<img src="icons/passive/Collectible_Samson's_Chains_icon.png" alt="Samson's Chains">
+				<img src="icons/passive/Collectible_Scapular_icon.png" alt="Scapular">
+				<img src="icons/passive/Scorpio_Icon.png" alt="Scorpio">
+				<img src="icons/passive/Screw_Icon.png" alt="Screw">
+				<img src="icons/passive/Sharp_Plug_Icon.png" alt="Sharp Plug">
+				<img src="icons/passive/Sissy_Longlegs_Icon.png" alt="Sissy Longlegs">
+				<img src="icons/passive/Sister_Maggy_Rebirth_Icon.png" alt="Sister Maggy">
+				<img src="icons/passive/Skatole_Icon.png" alt="Skatole">
+				<img src="icons/passive/Skeleton_Key_Rebirth_Icon.png" alt="Skeleton Key">
+				<img src="icons/passive/Smart_Fly_Icon.png" alt="Smart Fly">
+				<img src="icons/passive/Collectible_SMB_Super_Fan_Rebirth_icon.png" alt="SMB Super Fan">
+				<img src="icons/passive/Soy_Milk_Icon.png" alt="Soy Milk">
+				<img src="icons/passive/Speed_Ball_Rebirth_Icon.png" alt="Speed Ball">
+				<img src="icons/passive/Spelunker_Hat_Icon.png" alt="Spelunker Hat">
+				<img src="icons/passive/Spider_Baby_Icon.png" alt="Spider Baby">
+				<img src="icons/passive/Spider_Bite_Icon.png" alt="Spider Bite">
+				<img src="icons/passive/Spirit_of_the_Night_Rebirth_Icon.png" alt="Spirit of the Night">
+				<img src="icons/passive/Spoon_Bender_Icon.png" alt="Spoon Bender">
+				<img src="icons/passive/Squeezy_Icon.png" alt="Squeezy">
+				<img src="icons/passive/Starter_Deck_Icon.png" alt="Starter Deck">
+				<img src="icons/passive/Steam_Sale_Icon.png" alt="Steam Sale">
+				<img src="icons/passive/Stem_Cells_Icon.png" alt="Stem Cells">
+				<img src="icons/passive/Steven_Icon.png" alt="Steven">
+				<img src="icons/passive/Stigmata_Icon.png" alt="Stigmata">
+				<img src="icons/passive/Stop_Watch_Icon.png" alt="Stop Watch">
+				<img src="icons/passive/Strange_Attractor_Rebirth_Icon.png" alt="Strange Attractor">
+				<img src="icons/passive/Super_Bandage_Icon.png" alt="Super Bandage">
+				<img src="icons/passive/Synthoil_Icon.png" alt="Synthoil">
+				<img src="icons/passive/Taurus_Rebirth_Icon.png" alt="Taurus">
+				<img src="icons/passive/Tech.5_Rebirth_Icon.png" alt="Tech.5">
+				<img src="icons/passive/Technology_Icon.png" alt="Technology">
+				<img src="icons/passive/Technology_2_Icon.png" alt="Technology 2">
+				<img src="icons/passive/The_Battery_Icon.png" alt="The Battery">
+				<img src="icons/passive/The_Belt_Rebirth_Icon.png" alt="The Belt">
+				<img src="icons/passive/The_Black_Bean_Icon.png" alt="The Black Bean">
+				<img src="icons/passive/The_Body_Icon.png" alt="The Body">
+				<img src="icons/passive/The_Common_Cold_Icon.png" alt="The Common Cold">
+				<img src="icons/passive/The_Compass_Rebirth_Icon.png" alt="The Compass">
+				<img src="icons/passive/Collectible_The_Halo_icon.png" alt="The Halo">
+				<img src="icons/passive/Collectible_The_Inner_Eye_icon.png" alt="The Inner Eye">
+				<img src="icons/passive/Collectible_The_Ladder_icon.png" alt="The Ladder">
+				<img src="icons/passive/Collectible_The_Ludovico_Technique_icon.png" alt="The Ludovico Technique">
+				<img src="icons/passive/Collectible_The_Mark_icon.png" alt="The Mark">
+				<img src="icons/passive/Collectible_The_Mind_icon.png" alt="The Mind">
+				<img src="icons/passive/Collectible_The_Mulligan_Rebirth_icon.png" alt="The Mulligan">
+				<img src="icons/passive/Collectible_The_Negative_icon.png" alt="The Negative">
+				<img src="icons/passive/Collectible_The_Pact_icon.png" alt="The Pact">
+				<img src="icons/passive/Collectible_The_Parasite_icon.png" alt="The Parasite">
+				<img src="icons/passive/Collectible_The_Peeper_Rebirth_icon.png" alt="The Peeper">
+				<img src="icons/passive/Collectible_The_Polaroid_icon.png" alt="The Polaroid">
+				<img src="icons/passive/Collectible_The_Relic_icon.png" alt="The Relic">
+				<img src="icons/passive/Collectible_The_Sad_Onion_icon.png" alt="The Sad Onion">
+				<img src="icons/passive/Collectible_The_Small_Rock_icon.png" alt="The Small Rock">
+				<img src="icons/passive/Collectible_The_Soul_icon.png" alt="The Soul">
+				<img src="icons/passive/Collectible_The_Virus_icon.png" alt="The Virus">
+				<img src="icons/passive/Collectible_The_Wafer_icon.png" alt="The Wafer">
+				<img src="icons/passive/Collectible_There's_Options_icon.png" alt="There's Options">
+				<img src="icons/passive/Collectible_Thunder_Thighs_icon.png" alt="Thunder Thights">
+				<img src="icons/passive/Collectible_Tiny_Planet_icon.png" alt="Tiny Planet">
+				<img src="icons/passive/Collectible_Toothpicks_icon.png" alt="Toothpicks">
+				<img src="icons/passive/Collectible_Torn_Photo_icon.png" alt="Torn Photo">
+				<img src="icons/passive/Collectible_Tough_Love_Rebirth_icon.png" alt="Tough Love">
+				<img src="icons/passive/Collectible_Transcendence_icon.png" alt="Transcendence">
+				<img src="icons/passive/Collectible_Treasure_Map_icon.png" alt="Treasure Map">
+				<img src="icons/passive/Collectible_Trinity_Shield_icon.png" alt="Trinity Shield">
+				<img src="icons/passive/Collectible_Virgo_icon.png" alt="Virgo">
+				<img src="icons/passive/Collectible_Whore_of_Babylon_Rebirth_icon.png" alt="Whore of Babylon">
+				<img src="icons/passive/Collectible_Wire_Coat_Hanger_icon.png" alt="Wire Coat Hanger">
+				<img src="icons/passive/Collectible_Wooden_Spoon_icon.png" alt="Wooden Spoon">
+				<img src="icons/passive/Collectible_X-Ray_Vision_icon.png" alt="X-Ray Vision">
+				<img src="icons/passive/8_Inch_Nails_Afterbirth_icon.png" alt="8 Inch Nails">
+				<img src="icons/passive/Collectible_Athame_icon.png" alt="Athame">
+				<img src="icons/passive/Collectible_Betrayal_icon.png" alt="Betrayal">
+				<img src="icons/passive/Collectible_Binky_icon.png" alt="Binky">
+				<img src="icons/passive/Collectible_Black_Powder_icon.png" alt="Black Powder">
+				<img src="icons/passive/Collectible_Bomber_Boy_icon.png" alt="Bomber Boy">
+				<img src="icons/passive/Collectible_Bumbo_icon.png" alt="Bumbo">
+				<img src="icons/passive/Collectible_Bursting_Sack_icon.png" alt="Bursting Sack">
+				<img src="icons/passive/Collectible_Cambion_Conception_Afterbirth_icon.png" alt="Cambion Conception">
+				<img src="icons/passive/Collectible_Car_Battery_icon.png" alt="Car Battery">
+				<img src="icons/passive/Collectible_Censer_icon.png" alt="Censer">
+				<img src="icons/passive/Collectible_Chaos_icon.png" alt="Chaos">
+				<img src="icons/passive/Collectible_Charged_Baby_icon.png" alt="Charged Baby">
+				<img src="icons/passive/Collectible_Circle_of_Protection_icon.png" alt="Circle of Protection">
+				<img src="icons/passive/Collectible_Continuum_Afterbirth_icon.png" alt="Continuum">
+				<img src="icons/passive/Collectible_Crack_Jacks_icon.png" alt="Crack Jacks">
+				<img src="icons/passive/Collectible_Crown_of_Light_Afterbirth_icon.png" alt="Crown of Light">
+				<img src="icons/passive/Collectible_Curse_of_the_Tower_icon.png" alt="Curse of the Tower">
+				<img src="icons/passive/Collectible_Dead_Eye_icon.png" alt="Dead Eye">
+				<img src="icons/passive/Collectible_Deep_Pockets_icon.png" alt="Deep Pockets">
+				<img src="icons/passive/Collectible_Eden's_Blessing_icon.png" alt="Eden's Blessing">
+				<img src="icons/passive/Collectible_Empty_Vessel_icon.png" alt="Empty Vessel">
+				<img src="icons/passive/Collectible_Epiphora_icon.png" alt="Epiphora">
+				<img src="icons/passive/Collectible_Evil_Eye_Afterbirth_icon.png" alt="Evil Eye">
+				<img src="icons/passive/Collectible_Explosivo_icon.png" alt="Explosivo">
+				<img src="icons/passive/Collectible_Farting_Baby_Afterbirth_icon.png" alt="Farting Baby">
+				<img src="icons/passive/Collectible_Fate's_Reward_icon.png" alt="Fate's Reward!">
+				<img src="icons/passive/Collectible_Friend_Zone_Afterbirth_icon.png" alt="Friend Zone">
+				<img src="icons/passive/Collectible_Fruit_Cake_icon.png" alt="Fruit Cake">
+				<img src="icons/passive/Collectible_GB_Bug_icon.png" alt="GB Bug">
+				<img src="icons/passive/Collectible_Glitter_Bombs_icon.png" alt="Glitter Bombs">
+				<img src="icons/passive/Collectible_God's_Flesh_icon.png" alt="God's Flesh">
+				<img src="icons/passive/Collectible_Head_of_the_Keeper_icon.png" alt="Head of the Keeper">
+				<img src="icons/passive/Collectible_Holy_Light_icon.png" alt="Holy Light">
+				<img src="icons/passive/Collectible_Host_Hat_icon.png" alt="Host Hat">
+				<img src="icons/passive/Collectible_Immaculate_Conception_icon.png" alt="Immaculate Conception">
+				<img src="icons/passive/Collectible_Incubus_icon.png" alt="Incubus">
+				<img src="icons/passive/Collectible_Key_Bum_Afterbirth_icon.png" alt="Key Bum">
+				<img src="icons/passive/Collectible_Kidney_Stone_icon.png" alt="Kidney Stone">
+				<img src="icons/passive/Collectible_Lil_Chest_icon.png" alt="Lil Chest">
+				<img src="icons/passive/Collectible_Lil_Gurdy_icon.png" alt="Lil Gurdy">
+				<img src="icons/passive/Collectible_Lil'_Loki_Afterbirth_icon.png" alt="Lil' Loki">
+				<img src="icons/passive/Collectible_Lost_Fly_Afterbirth_icon.png" alt="Lost Fly">
+				<img src="icons/passive/Collectible_Lusty_Blood_icon.png" alt="Lusty Blood">
+				<img src="icons/passive/Collectible_Marked_icon.png" alt="Marked">
+				<img src="icons/passive/Collectible_Maw_of_the_Void_icon.png" alt="Maw of the Void">
+				<img src="icons/passive/Collectible_Milk!_icon.png" alt="Milk!">
+				<img src="icons/passive/Collectible_Mom's_Pearls_icon.png" alt="Mom's Pearls">
+				<img src="icons/passive/Collectible_More_Options_icon.png" alt="More Options">
+				<img src="icons/passive/Collectible_Mr._Dolly_icon.png" alt="Mr. Dolly">
+				<img src="icons/passive/Collectible_Multidimensional_Baby_Afterbirth_icon.png" alt="Multidimensional Baby">
+				<img src="icons/passive/Collectible_My_Shadow_icon.png" alt="My Shadow">
+				<img src="icons/passive/Collectible_Night_Light_icon.png" alt="Night Light">
+				<img src="icons/passive/Collectible_No._2_icon.png" alt="No. 2">
+				<img src="icons/passive/Collectible_Papa_Fly_icon.png" alt="Papa Fly">
+				<img src="icons/passive/Collectible_Pay_to_Play_icon.png" alt="Pay to Play">
+				<img src="icons/passive/Collectible_PJs_icon.png" alt="PJs">
+				<img src="icons/passive/Collectible_Pupula_Duplex_icon.png" alt="Pupula Duplex">
+				<img src="icons/passive/Collectible_Purity_icon.png" alt="Purity">
+				<img src="icons/passive/Collectible_Restock_icon.png" alt="Restock">
+				<img src="icons/passive/Collectible_Rune_Bag_icon.png" alt="Rune Bag">
+				<img src="icons/passive/Collectible_Sack_Head_icon.png" alt="Sack Head">
+				<img src="icons/passive/Collectible_Scatter_Bombs_icon.png" alt="Scatter Bombs">
+				<img src="icons/passive/Seraphim_Icon.png" alt="Seraphim">
+				<img src="icons/passive/Serpent's_Kiss_Icon.png" alt="Serpent's Kiss">
+				<img src="icons/passive/Spear_of_Destiny_Afterbirth_Icon.png" alt="Spear of Destiny">
+				<img src="icons/passive/Spider_Mod_Icon.png" alt="Spider Mod">
+				<img src="icons/passive/Sticky_Bombs_Icon.png" alt="Sticky Bombs">
+				<img src="icons/passive/Succubus_Icon.png" alt="Succubus">
+				<img src="icons/passive/Sworn_Protector_Icon.png" alt="Sworn Protector">
+				<img src="icons/passive/Tech_X_Icon.png" alt="Tech X">
+				<img src="icons/passive/Collectible_The_Wiz_icon.png" alt="The Wiz">
+				<img src="icons/passive/Collectible_Toxic_Shock_icon.png" alt="Toxic Shock">
+				<img src="icons/passive/Collectible_Tractor_Beam_icon.png" alt="Tractor Beam">
+				<img src="icons/passive/Collectible_Zodiac_icon.png" alt="Zodiac">
+				<img src="icons/passive/7_Seals_icon.png" alt="7 Seals">
+				<img src="icons/passive/Collectible_Acid_Baby_icon.png" alt="Acid Baby">
+				<img src="icons/passive/Collectible_Adrenaline_icon.png" alt="Adrenaline">
+				<img src="icons/passive/Trinket_Analog_Stick_icon.png" alt="Analog Stick">
+				<img src="icons/passive/Collectible_Angelic_Prism_icon.png" alt="Angelic Prism">
+				<img src="icons/passive/Collectible_Angry_Fly_icon.png" alt="Angry Fly">
+				<img src="icons/passive/Collectible_Apple!_icon.png" alt="Apple!">
+				<img src="icons/passive/Collectible_Backstabber_icon.png" alt="Backstabber">
+				<img src="icons/passive/Collectible_Belly_Button_icon.png" alt="Belly Button">
+				<img src="icons/passive/Collectible_Big_Chubby_icon.png" alt="Big Chubby">
+				<img src="icons/passive/Collectible_Blanket_icon.png" alt="Blanket">
+				<img src="icons/passive/Bloodshot_Eye_Icon.png" alt="Bloodshot Eye">
+				<img src="icons/passive/Collectible_Bozo_icon.png" alt="Bozo">
+				<img src="icons/passive/Collectible_Brittle_Bones_icon.png" alt="Brittle Bones">
+				<img src="icons/passive/Collectible_Broken_Modem_icon.png" alt="Broken Modem">
+				<img src="icons/passive/Collectible_Broken_Shovel_2_icon.png" alt="Broken Shovel">
+				<img src="icons/passive/Collectible_Buddy_in_a_Box_icon.png" alt="Buddy in a Box">
+				<img src="icons/passive/Collectible_Camo_Undies_icon.png" alt="Camo Undies">
+				<img src="icons/passive/Collectible_Compound_Fracture_icon.png" alt="Compound Fracture">
+				<img src="icons/passive/Collectible_Cone_Head_icon.png" alt="Cone Head">
+				<img src="icons/passive/Collectible_Contagion_icon.png" alt="Contagion">
+				<img src="icons/passive/Collectible_Dad's_Lost_Coin_icon.png" alt="Dad's Lost Coin">
+				<img src="icons/passive/Collectible_Dad's_Ring_icon.png" alt="Dad's Ring">
+				<img src="icons/passive/Collectible_Dark_Prince's_Crown_icon.png" alt="Dark Prince's Crown">
+				<img src="icons/passive/Collectible_Dead_Tooth_icon.png" alt="Dead Tooth">
+				<img src="icons/passive/Collectible_Death's_List_icon.png" alt="Death's List">
+				<img src="icons/passive/Collectible_Depression_icon.png" alt="Depression">
+				<img src="icons/passive/Collectible_Divorce_Papers_icon.png" alt="Divorce Papers">
+				<img src="icons/passive/Collectible_Dog_Tooth_icon.png" alt="Dog Tooth">
+				<img src="icons/passive/Collectible_Duality_icon.png" alt="Duality">
+				<img src="icons/passive/Collectible_Eucharist_icon.png" alt="Eucharist">
+				<img src="icons/passive/Collectible_Euthanasia_icon.png" alt="Euthanasia">
+				<img src="icons/passive/Collectible_Eye_of_Belial_icon.png" alt="Eye of Belial">
+				<img src="icons/passive/Collectible_Eye_of_Greed_icon.png" alt="Eye of Greed">
+				<img src="icons/passive/Collectible_Fast_Bombs_icon.png" alt="Fast Bombs">
+				<img src="icons/passive/Collectible_Finger!_icon.png" alt="Finger!">
+				<img src="icons/passive/Collectible_Flat_Stone_icon.png" alt="Flat Stone">
+				<img src="icons/passive/Collectible_Ghost_Pepper_icon.png" alt="Ghost Pepper">
+				<img src="icons/passive/Collectible_Glaucoma_icon.png" alt="Glaucoma">
+				<img src="icons/passive/Collectible_Glyph_of_Balance_icon.png" alt="Glyph of Balance">
+				<img src="icons/passive/Collectible_Greed's_Gullet_icon.png" alt="Greed's Gullet">
+				<img src="icons/passive/Collectible_Haemolacria_icon.png" alt="Haemolacria">
+				<img src="icons/passive/Collectible_Hallowed_Ground_icon.png" alt="Hallowed Ground">
+				<img src="icons/passive/Hushy_Icon.png" alt="Hushy">
+				<img src="icons/passive/Collectible_Jacob's_Ladder_icon.png" alt="Jacob's Ladder">
+				<img src="icons/passive/Collectible_Jaw_Bone_icon.png" alt="Jaw Bone">
+				<img src="icons/passive/Collectible_Jumper_Cables_icon.png" alt="Jumper Cables">
+				<img src="icons/passive/Collectible_King_Baby_icon.png" alt="King Baby">
+				<img src="icons/passive/Collectible_Lachryphagy_icon.png" alt="Lachryphagy">
+				<img src="icons/passive/Collectible_Large_Zit_icon.png" alt="Large Zit">
+				<img src="icons/passive/Collectible_Lead_Pencil_icon.png" alt="Lead Pencil">
+				<img src="icons/passive/Collectible_Leprosy_icon.png" alt="Leprosy">
+				<img src="icons/passive/Collectible_Lil_Delirium_icon.png" alt="Lil Delirium">
+				<img src="icons/passive/Collectible_Lil_Monstro_icon.png" alt="Lil Monstro">
+				<img src="icons/passive/Collectible_Lil_Spewer_icon.png" alt="Lil Spewer">
+				<img src="icons/passive/Collectible_Linger_Bean_icon.png" alt="Linger Bean">
+				<img src="icons/passive/Collectible_Little_Horn_icon.png" alt="Little Horn">
+				<img src="icons/passive/Collectible_Marbles_icon.png" alt="Marbles">
+				<img src="icons/passive/Collectible_Marrow_icon.png" alt="Marrow">
+				<img src="icons/passive/Collectible_Metal_Plate_icon.png" alt="Metal Plate">
+				<img src="icons/passive/Collectible_Moldy_Bread_icon.png" alt="Moldy Bread">
+				<img src="icons/passive/Collectible_Mom's_Razor_icon.png" alt="Mom's Razor">
+				<img src="icons/passive/Collectible_Mystery_Egg_icon.png" alt="Mystery Egg">
+				<img src="icons/passive/Collectible_Parasitoid_icon.png" alt="Parasitoid">
+				<img src="icons/passive/Collectible_Pointy_Rib_icon.png" alt="Pointy Rib">
+				<img src="icons/passive/Collectible_Poke_Go_icon.png" alt="Poke Go">
+				<img src="icons/passive/Collectible_Polydactyly_icon.png" alt="Polydactyly">
+				<img src="icons/passive/Collectible_Pop!_icon.png" alt="Pop!">
+				<img src="icons/passive/Collectible_Sack_of_Sacks_icon.png" alt="Sack of Sacks">
+				<img src="icons/passive/Collectible_Schoolbag_icon.png" alt="Schoolbag">
+				<img src="icons/passive/Shade_Icon.png" alt="Shade">
+				<img src="icons/passive/Shard_of_Glass_Icon.png" alt="Shard of Glass">
+				<img src="icons/passive/Sinus_Infection_Icon.png" alt="Sinus Infection">
+				<img src="icons/passive/Slipped_Rib_Icon.png" alt="Slipped Rib">
+				<img src="icons/passive/Sulfuric_Acid_Icon.png" alt="Sulfuric Acid">
+				<img src="icons/passive/Tarot_Cloth_Icon.png" alt="Tarot Cloth">
+				<img src="icons/passive/Technology_Zero_Icon.png" alt="Technology Zero">
+				<img src="icons/passive/Collectible_Trisagion_icon.png" alt="Trisagion">
+				<img src="icons/passive/Collectible_Varicose_Veins_icon.png" alt="Varicose Veins">
+				<img src="icons/passive/YO_LISTEN!_Icon.png" alt="YO LISTEN!">
+				<img src="icons/trinkets/Collectible_Blue_Baby's_Soul_icon.png" alt="???'s Soul">
+				<img src="icons/trinkets/Collectible_A_Missing_Page_icon.png" alt="A Missing Page">
+				<img src="icons/trinkets/Trinket_AAA_Battery_icon.png" alt="AAA Battery">
+				<img src="icons/trinkets/Ace_of_Spades_Icon.png" alt="Ace of Spades">
+				<img src="icons/trinkets/Trinket_Bible_Tract_icon.png" alt="Bible Tract">
+				<img src="icons/trinkets/Collectible_Black_Lipstick_icon.png" alt="Black Lipstick">
+				<img src="icons/trinkets/Trinket_Bloody_Penny_icon.png" alt="Bloody Penny">
+				<img src="icons/trinkets/Trinket_Broken_Ankh_icon.png" alt="Broken Ankh">
+				<img src="icons/trinkets/Trinket_Broken_Magnet_icon.png" alt="Broken Magnet">
+				<img src="icons/trinkets/Trinket_Broken_Remote_icon.png" alt="Broken Remote">
+				<img src="icons/trinkets/Trinket_Burnt_Penny_icon.png" alt="Burnt Penny">
+				<img src="icons/trinkets/Trinket_Butt_Penny_icon.png" alt="Butt Penny">
+				<img src="icons/trinkets/Collectible_Cain's_Eye_icon.png" alt="Cain's Eye">
+				<img src="icons/trinkets/Trinket_Callus_icon.png" alt="Callus">
+				<img src="icons/trinkets/Trinket_Cancer_icon.png" alt="Cancer">
+				<img src="icons/trinkets/Cartridge_Icon.png" alt="Cartridge">
+				<img src="icons/trinkets/Trinket_Child's_Heart_icon.png" alt="Child's Heart">
+				<img src="icons/trinkets/Trinket_Counterfeit_Penny_icon.png" alt="Counterfeit Penny">
+				<img src="icons/trinkets/Collectible_Cursed_Skull_icon.png" alt="Cursed Skull">
+				<img src="icons/trinkets/Collectible_Curved_Horn_icon.png" alt="Curved Horn">
+				<img src="icons/trinkets/Trinket_Daemon's_Tail_icon.png" alt="Daemon's Tail">
+				<img src="icons/trinkets/Trinket_Eve's_Bird_Foot_icon.png" alt="Eve's Bird Foot">
+				<img src="icons/trinkets/Trinket_Fish_Head_icon.png" alt="Fish Head">
+				<img src="icons/trinkets/Trinket_Flat_Penny_icon.png" alt="Flat Penny">
+				<img src="icons/trinkets/Trinket_Flat_Worm_icon.png" alt="Flat Worm">
+				<img src="icons/trinkets/Collectible_Goat_Hoof_icon.png" alt="Goat Hoof">
+				<img src="icons/trinkets/Trinket_Hook_Worm_icon.png" alt="Hook Worm">
+				<img src="icons/trinkets/Trinket_Isaac's_Fork_icon.png" alt="Isaac's Fork">
+				<img src="icons/trinkets/Trinket_Isaac's_Head_icon.png" alt="Isaac's Head">
+				<img src="icons/trinkets/Trinket_Judas'_Tongue_icon.png" alt="Judas' Tongue">
+				<img src="icons/trinkets/Trinket_Liberty_Cap_icon.png" alt="Liberty Cap">
+				<img src="icons/trinkets/Trinket_Lucky_Rock_icon.png" alt="Lucky Rock">
+				<img src="icons/trinkets/Trinket_Lucky_Toe_icon.png" alt="Lucky Toe">
+				<img src="icons/trinkets/Trinket_Maggy's_Faith_icon.png" alt="Maggy's Faith">
+				<img src="icons/trinkets/Trinket_Match_Stick_icon.png" alt="Match Stick">
+				<img src="icons/trinkets/Trinket_Missing_Poster_icon.png" alt="Missing Poster">
+				<img src="icons/trinkets/Trinket_Mom's_Pearl_icon.png" alt="Mom's Pearl">
+				<img src="icons/trinkets/Trinket_Mom's_Toenail_icon.png" alt="Mom's Toenail">
+				<img src="icons/trinkets/Trinket_Monkey_Paw_icon.png" alt="Monkey Paw">
+				<img src="icons/trinkets/Trinket_Mysterious_Candy_icon.png" alt="Mysterious Candy">
+				<img src="icons/trinkets/Trinket_Mysterious_Paper_icon.png" alt="Mysterious Paper">
+				<img src="icons/trinkets/Trinket_Paper_Clip_icon.png" alt="Paper Clip">
+				<img src="icons/trinkets/Trinket_Petrified_Poop_icon.png" alt="Petrified Poop">
+				<img src="icons/trinkets/Trinket_Pinky_Eye_icon.png" alt="Pinky Eye">
+				<img src="icons/trinkets/Trinket_Pulse_Worm_icon.png" alt="Pulse Worm">
+				<img src="icons/trinkets/Trinket_Purple_Heart_icon.png" alt="Purple Heart">
+				<img src="icons/trinkets/Trinket_Push_Pin_icon.png" alt="Push Pin">
+				<img src="icons/trinkets/Trinket_Red_Patch_icon.png" alt="Red Patch">
+				<img src="icons/trinkets/Trinket_Ring_Worm_icon.png" alt="Ring Worm">
+				<img src="icons/trinkets/Trinket_Rosary_Bead_icon.png" alt="Rosary Bead">
+				<img src="icons/trinkets/Trinket_Rusted_Key_icon.png" alt="Rusted Key">
+				<img src="icons/trinkets/Collectible_Safety_Cap_icon.png" alt="Safety Cap">
+				<img src="icons/trinkets/Trinket_Samson's_Lock_icon.png" alt="Samson's Lock">
+				<img src="icons/trinkets/Store_Credit_Icon.png" alt="Store Credit">
+				<img src="icons/trinkets/Swallowed_Penny_Icon.png" alt="Swallowed Penny">
+				<img src="icons/trinkets/Trinket_The_Left_Hand_icon.png" alt="The Left Hand">
+				<img src="icons/trinkets/Trinket_Tick_icon.png" alt="Tick">
+				<img src="icons/trinkets/Trinket_Umbilical_Cord_icon.png" alt="Umbilical Cord">
+				<img src="icons/trinkets/Trinket_Whip_Worm_icon.png" alt="Whip Worm">
+				<img src="icons/trinkets/Trinket_Black_Feather_icon.png" alt="Black Feather">
+				<img src="icons/trinkets/Trinket_Blasting_Cap_icon.png" alt="Blasting Cap">
+				<img src="icons/trinkets/Blind_Rage_Icon.png" alt="Blind Rage">
+				<img src="icons/trinkets/Trinket_Blister_icon.png" alt="Blister">
+				<img src="icons/trinkets/Trinket_Bob's_Bladder_icon.png" alt="Bob's Bladder">
+				<img src="icons/trinkets/Trinket_Brown_Cap_icon.png" alt="Brown Cap">
+				<img src="icons/trinkets/Trinket_Child_Leash_icon.png" alt="Child Leash">
+				<img src="icons/trinkets/Trinket_Cracked_Dice_icon.png" alt="Cracked Dice">
+				<img src="icons/trinkets/Trinket_Endless_Nameless_icon.png" alt="Endless Nameless">
+				<img src="icons/trinkets/Trinket_Error_icon.png" alt="Error">
+				<img src="icons/trinkets/Trinket_Faded_Polaroid_icon.png" alt="Faded Polaroid">
+				<img src="icons/trinkets/Trinket_Golden_Horse_Shoe_icon.png" alt="Golden Horse Shoe">
+				<img src="icons/trinkets/Trinket_Karma_icon.png" alt="Karma">
+				<img src="icons/trinkets/Trinket_Lazy_Worm_icon.png" alt="Lazy Worm">
+				<img src="icons/trinkets/Trinket_Lil_Larva_icon.png" alt="Lil Larva">
+				<img src="icons/trinkets/Trinket_Louse_icon.png" alt="Louse">
+				<img src="icons/trinkets/Trinket_Mom's_Locket_icon.png" alt="Mom's Locket">
+				<img src="icons/trinkets/Trinket_NO!_icon.png" alt="NO!">
+				<img src="icons/trinkets/Trinket_Poker_Chip_icon.png" alt="Poker Chip">
+				<img src="icons/trinkets/Trinket_Rainbow_Worm_icon.png" alt="Rainbow Worm">
+				<img src="icons/trinkets/Trinket_Rib_of_Greed_icon.png" alt="Rib of Greed">
+				<img src="icons/trinkets/Trinket_Safety_Scissors_icon.png" alt="Safety Scissors">
+				<img src="icons/trinkets/Second_Hand_Icon.png" alt="Second Hand">
+				<img src="icons/trinkets/Shiny_Rock_Icon.png" alt="Shiny Rock">
+				<img src="icons/trinkets/Store_Key_Icon.png" alt="Store Key">
+				<img src="icons/trinkets/Stud_Finder_Icon.png" alt="Stud Finder">
+				<img src="icons/trinkets/Super_Magnet_Icon.png" alt="Super Magnet">
+				<img src="icons/trinkets/Tape_Worm_Icon.png" alt="Tape Worm">
+				<img src="icons/trinkets/Trinket_Watch_Battery_icon.png" alt="Watch Battery">
+				<img src="icons/trinkets/Trinket_Baby-Bender_icon.png" alt="Baby Bender">
+				<img src="icons/trinkets/Trinket_Bag_Lunch_icon.png" alt="Bag Lunch">
+				<img src="icons/trinkets/Trinket_Bat_Wing_icon.png" alt="Bat Wing">
+				<img src="icons/trinkets/Trinket_Black_Tooth_icon.png" alt="Black Tooth">
+				<img src="icons/trinkets/Trinket_Bloody_Crown_icon.png" alt="Bloody Crown">
+				<img src="icons/trinkets/Trinket_Butter!_icon.png" alt="Butter!">
+				<img src="icons/trinkets/Trinket_Cracked_Crown_icon.png" alt="Cracked Crown">
+				<img src="icons/trinkets/Trinket_Crow_Heart_icon.png" alt="Crow Heart">
+				<img src="icons/trinkets/Trinket_Dim_Bulb_icon.png" alt="Dim Bulb">
+				<img src="icons/trinkets/Trinket_Door_Stop_icon.png" alt="Door Stop">
+				<img src="icons/trinkets/Trinket_Duct_Tape_icon.png" alt="Duct Tape">
+				<img src="icons/trinkets/Trinket_Equality!_icon.png" alt="Equality!">
+				<img src="icons/trinkets/Trinket_Extension_Cord_icon.png" alt="Extension Cord">
+				<img src="icons/trinkets/Trinket_Filigree_Feather_icon.png" alt="Filigree Feather">
+				<img src="icons/trinkets/Trinket_Finger_Bone_icon.png" alt="Finger Bone">
+				<img src="icons/trinkets/Trinket_Fish_Tail_icon.png" alt="Fish Tail">
+				<img src="icons/trinkets/Trinket_Fragmented_Card_icon.png" alt="Fragmented Card">
+				<img src="icons/trinkets/Trinket_Hairpin_icon.png" alt="Hairpin">
+				<img src="icons/trinkets/Trinket_Locust_of_Conquest_icon.png" alt="Locust of Conquest">
+				<img src="icons/trinkets/Trinket_Locust_of_Death_icon.png" alt="Locust of Death">
+				<img src="icons/trinkets/Trinket_Locust_of_Famine_icon.png" alt="Locust of Famine">
+				<img src="icons/trinkets/Trinket_Locust_of_Pestilence_icon.png" alt="Locust of Pestilence">
+				<img src="icons/trinkets/Trinket_Locust_of_War_icon.png" alt="Locust of War">
+				<img src="icons/trinkets/Trinket_Lost_Cork_icon.png" alt="Lost Cork">
+				<img src="icons/trinkets/Trinket_Meconium_icon.png" alt="Meconium">
+				<img src="icons/trinkets/Trinket_Nose_Goblin_icon.png" alt="Nose Goblin">
+				<img src="icons/trinkets/Trinket_Ouroboros_Worm_icon.png" alt="Ouroboros Worm">
+				<img src="icons/trinkets/Trinket_Pay_to_Win_icon.png" alt="Pay to Win">
+				<img src="icons/trinkets/Trinket_Rotten_Penny_icon.png" alt="Rotten Penny">
+				<img src="icons/trinkets/Silver_Dollar_Icon.png" alt="Silver Dollar">
+				<img src="icons/trinkets/Stem_Cell_Icon.png" alt="Stem Cell">
+				<img src="icons/trinkets/Super_Ball_Icon.png" alt="Super Ball">
+				<img src="icons/trinkets/Trinket_Tonsil_icon.png" alt="Tonsil">
+				<img src="icons/trinkets/Trinket_Used_Diaper_icon.png" alt="Used Diaper">
+				<img src="icons/trinkets/Trinket_Vibrant_Bulb_icon.png" alt="Vibrant Bulb">
+				<img src="icons/trinkets/Trinket_Walnut_icon.png" alt="Walnut">
+				<img src="icons/trinkets/Trinket_Wish_Bone_icon.png" alt="Wish Bone">
+				<img src="icons/trinkets/Trinket_Wooden_Cross_icon.png" alt="Wooden Cross">
+				<img src="icons/cards/0_-_The_Fool_Icon.png" alt="0 - The Fool" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_I_-_The_Magician_icon.png" alt="I - The Magician" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_II_-_The_High_Priestess_icon.png" alt="II - The High Priestess" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_III_-_The_Empress_icon.png" alt="III - The Empress" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_IV_-_The_Emperor_icon.png" alt="IV - The Emperor" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_V_-_The_Hierophant_icon.png" alt="V - The Hierophant" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_VI_-_The_Lovers_icon.png" alt="VI - The Lovers" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_VII_-_The_Chariot_icon.png" alt="VII - The Chariot" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_VIII_-_Justice_icon.png" alt="VIII - Justice" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_IX_-_The_Hermit_icon.png" alt="IX - The Hermit" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_X_-_Wheel_of_Fortune_icon.png" alt="X - Wheel of Fortune" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XI_-_Strength_icon.png" alt="XI - Strength" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XII_-_The_Hanged_Man_icon.png" alt="XII - The Hanged Man" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XIII_-_Death_icon.png" alt="XIII - Death" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XIV_-_Temperance_icon.png" alt="XIV - Temperance" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XV_-_The_Devil_icon.png" alt="XV - The Devil" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XVI_-_The_Tower_icon.png" alt="XVI - The Tower" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XVII_-_The_Stars_icon.png" alt="XVII - The Stars" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XVIII_-_The_Moon_icon.png" alt="XVIII - The Moon" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XIX_-_The_Sun_icon.png" alt="XIX - The Sun" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XX_-_Judgement_icon.png" alt="XX - Judgment" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_XXI_-_The_World_icon.png" alt="XXI - The World" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/2_of_Clubs_Icon.png" alt="2 of Clubs" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/2_of_Diamonds_Icon.png" alt="2 of Diamonds" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/2_of_Spades_Icon.png" alt="2 of Spades" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/2_of_Hearts_Icon.png" alt="2 of Hearts" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Ace_of_Clubs_Icon.png" alt="Ace of Clubs" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Ace_of_Diamonds_Icon.png" alt="Ace of Diamonds" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Ace_of_Spades_(Card)_Icon.png" alt="Ace of Spades" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Ace_of_Hearts_Icon.png" alt="Ace of Hearts" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_Joker_icon.png" alt="Joker" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_Chaos_Card_icon.png" alt="Chaos Card" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_Huge_Growth_icon.png" alt="Huge Growth" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_Ancient_Recall_icon.png" alt="Ancient Recall" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_Era_Walk_icon.png" alt="Era Walk" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_Credit_Card_icon.png" alt="Credit Card" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_Rules_Card_icon.png" alt="Rules Card" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Suicide_King_Icon.png" alt="Suicide King" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/35px-Pickup_Q_Card_icon.png" alt="? Card" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_A_Card_Against_Humanity_icon.png" alt="A Card Against Humanity" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_Get_out_of_Jail_Free_Card_icon.png" alt="Get Out of Jail Free Card" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/Pickup_Holy_Card_icon.png" alt="Holy Card" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/cards/35px-Pickup_Emergency_Contact_icon.png" alt="Emergency Contact" height="26" width="20" style="padding: 3px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/runes/45px-Hagalaz_Icon.png" alt="Hagalaz" height="32" width="26" style="padding: 1px; margin-left: 1px; margin-right: 1px">
+				<img src="icons/runes/45px-Jera_Icon.png" alt="Jera" height="32" width="26" style="padding: 1px; margin-left: 1px; margin-right: 1px">
+				<img src="icons/runes/45px-Ehwaz_Icon.png" alt="Ehwaz" height="32" width="26" style="padding: 1px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/runes/45px-Dagaz_Icon.png" alt="Dagaz" height="32" width="26" style="padding: 1px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/runes/45px-Ansuz_Icon.png" alt="Ansuz" height="32" width="26" style="padding: 1px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/runes/45px-Perthro_Icon.png" alt="Perthro" height="32" width="26" style="padding: 1px; margin-left: 2px; margin-right: 2px">
+				<img src="icons/runes/45px-Berkano_Icon.png" alt="Berkano" height="32" width="26" style="padding: 1px; margin-left: 2px; margin-right: 2px">
+				<img src="icons/runes/45px-Algiz_Icon.png" alt="Algiz" height="32" width="26" style="padding: 0px; margin-left: 3px; margin-right: 3px">
+				<img src="icons/runes/35px-Pickup_Blank_Rune_icon.png" alt="Blank Rune" height="28" width="20" style=" margin-left: 6px; margin-bottom: 3px">
+				<img src="icons/runes/Pickup_Black_Rune_icon.png" alt="Black Rune" style="padding: 3px; margin-left: 6px; margin-right: 3px; margin-bottom: 3px">
+				<img src="icons/runes/38px-Pickup_Dice_Shard_icon.png" alt="Dice Shard" height="27" width="20" style="padding: 3px; margin-left: 6px; margin-bottom: 3px">
+			</div>
+	</body>
+</html>

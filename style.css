@@ -1,0 +1,36 @@
+body
+{
+	background-color: #6b4537;
+}
+
+h1 {
+	text-align: center;
+	color: #e6e6e6;
+	font-weight: lighter;
+	display: block;
+}
+
+.icon {
+	position: relative;
+	display: inline;
+}
+
+.content {
+	display: none;
+	position: absolute;
+	font-size: 18px;
+	color: #e6e6e6;
+	background-color: #5d4037;
+	width: 300px;
+	height: 200px;
+	text-align: center;
+}
+
+.icon:hover .content {
+	display:block;
+	}
+
+.desc {
+	text-align: left;
+	font-size: 16px;
+}
