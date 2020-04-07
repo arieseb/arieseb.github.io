@@ -39,10 +39,10 @@
 				<Button class="btn" onclick="filterSelection('feather')">Feather</Button><br>
 				<Button class="btn" onclick="filterSelection('food')">Food</Button>
 				<Button class="btn" onclick="filterSelection('fly')">Fly</Button><br>
-				<Button class="btn" onclick="filterSelection('gore')">Gore</Button>
-				<Button class="btn" onclick="filterSelection('green')">Green</Button><br>
-				<Button class="btn" onclick="filterSelection('hat')">Hat</Button>
-				<Button class="btn" onclick="filterSelection('head')">Head</Button><br>
+				<Button class="btn" onclick="filterSelection('green')">Green</Button>
+				<Button class="btn" onclick="filterSelection('hat')">Hat</Button><br>
+				<Button class="btn" onclick="filterSelection('head')">Head</Button>
+				<Button class="btn" onclick="filterSelection('heart')">Heart</Button><br>
 				<Button class="btn" onclick="filterSelection('holy')">Holy</Button>
 				<Button class="btn" onclick="filterSelection('horn')">Horn</Button><br>
 				<Button class="btn" onclick="filterSelection('jar')">Jar</Button>
@@ -66,11 +66,11 @@
 				<Button class="btn" onclick="filterSelection('spider')">Spider</Button>
 				<Button class="btn" onclick="filterSelection('square')">Square</Button><br>
 				<Button class="btn" onclick="filterSelection('star')">Star</Button>
-				<Button class="btn" onclick="filterSelection('stick')">Stick</Button><br>
-				<Button class="btn" onclick="filterSelection('stone')">Stone</Button>
-				<Button class="btn" onclick="filterSelection('symbol')">Symbol</Button><br>
-				<Button class="btn" onclick="filterSelection('tear')">Tear</Button>
-				<Button class="btn" onclick="filterSelection('technology')">Technology</Button><br>
+				<Button class="btn" onclick="filterSelection('stone')">Stone</Button><br>
+				<Button class="btn" onclick="filterSelection('symbol')">Symbol</Button>
+				<Button class="btn" onclick="filterSelection('tear')">Tear</Button><br>
+				<Button class="btn" onclick="filterSelection('technology')">Technology</Button>
+				<Button class="btn" onclick="filterSelection('time')">Time</Button><br>
 				<Button class="btn" onclick="filterSelection('tool')">Tool</Button>
 				<Button class="btn" onclick="filterSelection('tooth')">Tooth</Button><br>
 				<Button class="btn" onclick="filterSelection('triangle')">Triangle</Button>
@@ -96,7 +96,7 @@
 								<i style="font-size: 12px;">Active Item</i><br>
 								<div class="desc">
 									<ul style="list-style-type: circle;">
-										<li>Grants flight.</li>
+										<li>Passively grants flight.</li>
 										<li>Increases speed if less than 1.5.</li>
 										<li>Upon activation, charges in the direction the pony is facing.</li>
 									</ul>
@@ -224,7 +224,7 @@
 								<i style="font-size: 12px;">Active Item</i><br>
 								<div class="desc">
 									<ul style="list-style-type: circle;">
-										<li>Reveals floor layout, the secret rooms and the special rooms for the current floor.</li>
+										<li>Randomly reveals floor layout, the secret rooms or the special rooms for the current floor.</li>
 									</ul>
 								</div>
 							</p>
@@ -995,8 +995,8 @@
 								<i style="font-size: 12px;">Active Item</i><br>
 								<div class="desc">
 									<ul style="list-style-type: circle;">
-										<li>Detaches Isaac's head from his body.</li>
-										<li>Head turns into a tear shooting stationnary familiar for the current room.</li>
+										<li>Detaches Isaac's head from his body for the current room.</li>
+										<li>Head turns into a tear shooting stationnary familiar.</li>
 										<li>The player controls the body which also shoots tears.</li>
 									</ul>
 								</div>
@@ -1004,30 +1004,456 @@
 						</div>
 					</div>
 				</div>
-				<img src="icons/active/Collectible_Scissors_icon.png" alt="Scissors">
-				<img src="icons/active/Shoop_Da_Whoop!_Icon.png" alt="Shoop Da Whoop!">
-				<img src="icons/active/Spider_Butt_Icon.png" alt="Spider Butt">
-				<img src="icons/active/Tammy's_Head_Icon.png" alt="Tammy's Head">
-				<img src="icons/active/Telepathy_for_Dummies_Icon.png" alt="Telepathy for Dummies">
-				<img src="icons/active/Teleport_Icon.png" alt="Teleport">
-				<img src="icons/active/The_Bean_Icon.png" alt="The Bean">
-				<img src="icons/active/The_Bible_Icon.png" alt="The Bible">
-				<img src="icons/active/The_Book_of_Belial_Icon.png" alt="The Book of Belial">
-				<img src="icons/active/The_Book_of_Sin_Icon.png" alt="The Book of Sin">
-				<img src="icons/active/The_Boomerang_Rebirth_Icon.png" alt="The Boomerang">
-				<img src="icons/active/The_Candle_Icon.png" alt="The Candle">
-				<img src="icons/active/The_D6_Icon.png" alt="The D6">
-				<img src="icons/active/Collectible_The_Gamekid_icon.png" alt="The Gamekid">
-				<img src="icons/active/Collectible_The_Hourglass_icon.png" alt="The Hourglass">
-				<img src="icons/active/Collectible_The_Jar_Rebirth_icon.png" alt="The Jar">
-				<img src="icons/active/Collectible_The_Nail_icon.png" alt="The Nail">
-				<img src="icons/active/Collectible_The_Necronomicon_icon.png" alt="The Necronomicon">
-				<img src="icons/active/Collectible_The_Pinking_Shears_icon.png" alt="The Pinking Shears">
-				<img src="icons/active/Collectible_The_Poop_icon.png" alt="The Poop">
-				<img src="icons/active/Collectible_Undefined_icon.png" alt="Undefined">
-				<img src="icons/active/Collectible_Unicorn_Stump_icon.png" alt="Unicorn Stump">
-				<img src="icons/active/Collectible_We_Need_to_Go_Deeper!_Rebirth_icon.png" alt="We Need to Go Deeper!">
-				<img src="icons/active/Collectible_White_Pony_icon.png" alt="White Pony">
+				<div class="filterDiv head">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Shoop_Da_Whoop!" target=_blank><img src="icons/active/Shoop_Da_Whoop!_Icon.png" alt="Shoop Da Whoop!"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Shoop_Da_Whoop!_Icon.png" alt="Shoop Da Whoop!" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Shoop Da Whoop!</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Shoots a big laser in the direction Isaac shoots.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv black spider">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Spider_Butt" target=_blank><img src="icons/active/Spider_Butt_Icon.png" alt="Spider Butt"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Spider_Butt_Icon.png" alt="Spider Butt" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Spider Butt</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Deals damage to all enemies in the room and slows them for 4 seconds.</li>
+										<br>
+										<br>
+										<br>
+										<br>
+										<li style="font-size: 12px;">Belongs to the <i>Spider Baby set</i>.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv animal head">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Tammy%27s_Head" target=_blank><img src="icons/active/Tammy's_Head_Icon.png" alt="Tammy's Head"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Tammy's_Head_Icon.png" alt="Tammy's Head" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Tammy's Head</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Shoots 10 tears all around Isaac.</li>
+										<li>Tear damage is buffed.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv book yellow">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Telepathy_for_Dummies" target=_blank><img src="icons/active/Telepathy_for_Dummies_Icon.png" alt="Telepathy for Dummies"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Telepathy_for_Dummies_Icon.png" alt="Telepathy for Dummies" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Telepathy for Dummies</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Grants homing tears for the duration of the room.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv blue remote">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Teleport" target=_blank><img src="icons/active/Teleport_Icon.png" alt="Teleport"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Teleport_Icon.png" alt="Teleport" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Teleport</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Telports to a random room of the current floor.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv brown food">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Bean" target=_blank><img src="icons/active/The_Bean_Icon.png" alt="The Bean"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/The_Bean_Icon.png" alt="The Bean" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Bean</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Releases a gas that damages close enemies and poisons them for a short period.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv brown book holy">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Bible" target=_blank><img src="icons/active/The_Bible_Icon.png" alt="The Bible"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/The_Bible_Icon.png" alt="The Bible" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Bible</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Grants flight for the current room.</li>
+										<li>Instantly kills <i>Mom</i>, <i>Mom's Heart</i> and <i>It Lives</i> upon activation.</li>
+										<br>
+										<br>
+										<li style="font-size: 12px;">Belongs to both the <i>Seraphim set</i> and the <i>Bookworm set</i>.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv black book evil">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Book_of_Belial" target=_blank><img src="icons/active/The_Book_of_Belial_Icon.png" alt="The Book of Belial"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/The_Book_of_Belial_Icon.png" alt="The Book of Belial" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Book of Belial</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Buffs damage for the current room.</li>
+										<li>Increases chances for Devil Room or Angel Room to open if held.</li>
+										<br>
+										<br>
+										<br>
+										<li style="font-size: 12px;">Belongs to the <i>Bookworm set</i>.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv black book">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Book_of_Sin" target=_blank><img src="icons/active/The_Book_of_Sin_Icon.png" alt="The Book of Sin"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/The_Book_of_Sin_Icon.png" alt="The Book of Sin" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Book of Sin</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Spawns a random pickup.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv blue weapon">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Boomerang" target=_blank><img src="icons/active/The_Boomerang_Rebirth_Icon.png" alt="The Boomerang"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/The_Boomerang_Rebirth_Icon.png" alt="The Boomerang" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Boomerang</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Raises a boomerang that can be thrown after activation and returns afterwards.</li>
+										<li>The boomerang can grab pickups.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv blue candle">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Candle" target=_blank><img src="icons/active/The_Candle_Icon.png" alt="The Candle"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/The_Candle_Icon.png" alt="The Candle" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Candle</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Gives a blue flame that can be shot after activation.</li>
+										<li>Movement speed is reduced while holding the candle above the head.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv dice red">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_D6" target=_blank><img src="icons/active/The_D6_Icon.png" alt="The D6"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/The_D6_Icon.png" alt="The D6" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The D6</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Rerolls every items in the room.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv vidya">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Gamekid" target=_blank><img src="icons/active/Collectible_The_Gamekid_icon.png" alt="The Gamekid"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_The_Gamekid_icon.png" alt="The Gamekid" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Gamekid</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Grants invulnerability and the ability to deal contact damage.</li>
+										<li>Removes the ability to shoot tears.</li>
+										<li>Inflicts fear to all enemies.</li>
+										<li>Heals half a red heart for every two enemies killed.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv time">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Hourglass" target=_blank><img src="icons/active/Collectible_The_Hourglass_icon.png" alt="The Hourglass"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_The_Hourglass_icon.png" alt="The Hourglass" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Hourglass</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>All enemies are slowed for 8 seconds.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv jar">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Jar" target=_blank><img src="icons/active/Collectible_The_Jar_Rebirth_icon.png" alt="The Jar"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_The_Jar_Rebirth_icon.png" alt="The Jar" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Jar</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Stores up to 4 red hearts if all containers are full.</li>
+										<li>Upon activation, all hearts are dropped on the floor.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv time">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Nail" target=_blank><img src="icons/active/Collectible_The_Nail_icon.png" alt="The Nail"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_The_Nail_icon.png" alt="The Nail" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Nail</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Grants a Soul Heart.</li>
+										<li>Buffs damage and debuffs speed for the current room.</li>
+										<li>Gives the ability to deal contact damage and to destroy obstacles on contact for the current room.</li>
+										<li style="font-size: 12px;">Belongs to the <i>Leviathan set</i>.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv book evil">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Necronomicon" target=_blank><img src="icons/active/Collectible_The_Necronomicon_icon.png" alt="The Necronomicon"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_The_Necronomicon_icon.png" alt="The Necronomicon" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Necronomicon</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Damages all enemies in the room.</li>
+										<br>
+										<br>
+										<br>
+										<br>
+										<li style="font-size: 12px;">Belongs to the <i>Bookworm set</i>.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv sharp tool">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Pinking_Shears" target=_blank><img src="icons/active/Collectible_The_Pinking_Shears_icon.png" alt="The Pinking Shears"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_The_Pinking_Shears_icon.png" alt="The Pinking Shears" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Pinking Shears</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Detaches Isaac's head from his body for the current room.</li>
+										<li>The player controls the head which is now flying.</li>
+										<li>The body becomes a chasing familiar dealing contact damage.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv brown poop">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/The_Poop" target=_blank><img src="icons/active/Collectible_The_Poop_icon.png" alt="The Poop"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_The_Poop_icon.png" alt="The Poop" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>The Poop</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Spawns a pile of poop, knocking back close enemies and their shots.</li>
+										<br>
+										<br>
+										<br>
+										<br>
+										<li style="font-size: 12px;">Belongs to the <i>Oh Crap set</i>.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv red">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Undefined" target=_blank><img src="icons/active/Collectible_Undefined_icon.png" alt="Undefined"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Undefined_icon.png" alt="Undefined" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Undefined</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Teleports to the Treasure Room, The Secret Room, the Super Secret Room<br>or I AM ERROR.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv white horn bone">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Unicorn_Stump" target=_blank><img src="icons/active/Collectible_Unicorn_Stump_icon.png" alt="Unicorn Stump"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Unicorn_Stump_icon.png" alt="Unicorn Stump" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Unicorn Stump</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Grants invulnerability and buffs speed for 6 seconds.</li>
+										<li>Removes the ability to shoot tears.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv metal tool">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/We_Need_to_Go_Deeper!" target=_blank><img src="icons/active/Collectible_We_Need_to_Go_Deeper!_Rebirth_icon.png" alt="We Need to Go Deeper!"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_We_Need_to_Go_Deeper!_Rebirth_icon.png" alt="We Need to Go Deeper!" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>We Need to Go Deeper!</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Spawns a trapdoor leading to the next floor.</li>
+										<li>The trapdoor can lead to crawl space or black market.</li>
+										<li>If used Womb/Utero/Scarred Womb II,<br>will always lead to Sheol.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv animal head white">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/White_Pony" target=_blank><img src="icons/active/Collectible_White_Pony_icon.png" alt="White Pony"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_White_Pony_icon.png" alt="White Pony" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>White Pony</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Passively grants flight.</li>
+										<li>Increases speed if less than 1.5.</li>
+										<li>Upon activation, charges in the direction the pony is facing, becoming invulnerable during the charge.</li>
+										<li>Casts 5 beams of light, damaging enemies</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="filterDiv blood heart red viscera">
+					<div class="icon" >
+						<a href="https://bindingofisaacrebirth.gamepedia.com/Yum_Heart" target=_blank><img src="icons/active/Collectible_Yum_Heart_icon.png" alt="Yum Heart"/></a>
+						<div class="content">
+							<p>
+								<img src="icons/active/Collectible_Yum_Heart_icon.png" alt="Yum Heart" style=" margin-right: 20px; display: inline; float: right;"/>
+								<b>Yum Heart</b><br>
+								<i style="font-size: 12px;">Active Item</i><br>
+								<div class="desc">
+									<ul style="list-style-type: circle;">
+										<li>Heals for one full red heart.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
 				<img src="icons/active/Collectible_Yum_Heart_icon.png" alt="Yum Heart">
 				<img src="icons/active/Collectible_Box_of_Friends_icon.png" alt="Box of Friends">
 				<img src="icons/active/Collectible_D12_icon.png" alt="D12">
